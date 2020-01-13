@@ -1,0 +1,230 @@
+<html lang="ko"> 
+<head>
+    <meta charset="utf-8">
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+    <link href="../coralique/style.css" rel="stylesheet">
+</head>
+<body>
+
+
+    <!-- header ------------------------------------------------------------------------------------->
+    <header id="header">
+        <div class="header_top">
+            <div class="top_left">
+                <div class="bookmark"></div>
+                <p class="margin">LOGIN</p>
+                <p>JOIN</p>
+            </div>
+            <div class="top_right">
+                <p>SEARTCH</p>
+                <p>MY PAGE</p>
+                <p id="bag"></p>
+            </div>
+        </div>
+        <div class="big_logo">
+            <div class="logo"></div>
+        </div>
+        <div class="nav">
+            <ul>ONLINE STORE
+                <div class="li_list">
+                    <li>One peice</li>
+                    <li>Bikini</li>
+                    <li>Rash guard</li>
+                    <li>Resort wear</li>
+                    <li>Accessories</li>
+                    <li>+ L size</li>
+                </div>
+            </ul>
+            <ul>BRAND STORY</ul>
+            <ul>LOOKBOOK</ul>
+            <ul>EVENT</ul>
+            <ul>COMMUNITY
+                <div class="li_list">
+                    <li>Notice</li>
+                    <li>Q&A</li>
+                    <li>Review</li>
+                    <li>FAQ</li>
+                </div>
+            </ul>
+        </div>
+    </header>
+
+
+
+     <!-- slide ----------------------------------------------------------------------------------- -->
+
+    <div class="slide">
+        <img height="115%" class="active" id="slide_1" src="img/cc343849564b6e5784e466a9e568d22b.jpg" >
+        <img height="115%" id="slide_2" src="img/dd9b0783f597e022cec3b2b4186719f0.jpg" >
+        <img height="115%" id="slide_3" src="img/9d3751c545c89408023be2b9c22270d0.jpg" >
+        <div class="li_dot">
+            <div class="dot dot_color"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+    </div>
+
+
+
+    <!-- container1 ------------------------------------------------------------------------------------->
+
+    <div class="container_1">
+        <div class="inner_container">
+            <div class="best_item">
+                <p>BEST ITEM</p>
+                <div class="container_dot">
+                    <div class="dot dot_color"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                </div>
+            </div>
+            
+            <div class="wrapper">
+                <div class="arrow arrow_left"></div>
+                <div class="arrow arrow_right"></div>
+                <ul class="list">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+                <ul class="slide">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+                <ul class="slide">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+                <ul class="slide">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+        </div>
+        
+
+        <video class="video" src="https://www.youtube.com/af4411aa-baa9-4a66-a956-3085eeb21f58"></video>
+
+        
+        <div class="center_banner">
+            <div class="banner b1"></div>
+            <div class="banner b2"></div>
+            <div class="banner b3"></div>
+        </div>
+
+    </div>
+        
+
+    <div class="container_2">
+
+        <div class="line"></div>
+        
+        <div class="instagram">
+            <div class="insta_icon"></div>
+            <div class="insta_image image_1"></div>
+            <div class="insta_image image_2"></div>
+            <div class="insta_image image_3"></div>
+            <div class="insta_image image_4"></div>
+            <div class="insta_image image_5"></div>
+            <div class="insta_image image_6"></div>
+        </div>
+        
+        <div class="line"></div>
+        
+    </div>
+        
+
+    <div class="footer">
+
+
+    </div>
+
+
+  
+
+
+
+
+
+
+
+
+
+
+    <script>
+        $(document).ready(function(){
+
+            var index = 0;
+            var i = 0;
+            var _interval;
+            var length = $('img').length;
+
+            $(document).on('click', '.dot', function(){
+                var index = $(this).index();
+                change(index);
+            });
+
+            $(document).ready(function(){
+                interval();
+                change(index);
+            })
+
+            function interval(){
+                _interval = setInterval(function(){
+                    i++;
+                    i = i%length;
+                    change(i);
+                }, 4500);
+            };
+
+            function change(_change){
+                $('img').removeClass('active').eq(_change).addClass('active');
+                $('.dot').removeClass('dot_color').eq(_change).addClass('dot_color');
+            }
+
+
+
+
+
+
+            // --------------------------------------------------------------
+
+
+
+
+            var scrollTop, headerHiehgt;
+
+            $(window).scroll(function(){
+                scrollTop = $(window).scrollTop();
+                if(scrollTop > 0){
+                    $('header').addClass('opacity_white');
+                    $('.logo').addClass('scroll_logo');
+                    $('.nav').addClass('scroll_nav');
+                }else{
+                    $('header').removeClass('opacity_white');
+                    $('.logo').removeClass('scroll_logo');
+                    $('.nav').removeClass('scroll_nav');
+                }
+            })
+
+
+
+
+
+
+
+        })
+
+    </script>
+</body>
+</html>
