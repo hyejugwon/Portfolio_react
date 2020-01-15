@@ -1,4 +1,6 @@
-*{margin: 0; padding: 0; list-style: none; box-sizing: border-box;}
+*{margin: 0; padding: 0; list-style: none; box-sizing: border-box; font-family: 'Lato', 'Nanum Gothic', sans-serif;}
+
+
 
 header{
     display: block;
@@ -141,8 +143,24 @@ header:hover{
     margin-bottom: 8px;
 }
 
-
-
+.go_top{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    position: fixed;
+}
+.gotop_icon{
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    z-index: 1000;
+    width: 24px;
+    height: 62px;
+    background: url('./img/gotop.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+}
 
 
 
@@ -160,6 +178,9 @@ header:hover{
     justify-content: center;
     align-items: center;
 }
+
+
+
 .active{
     opacity: 1;
     transition: .6s;
@@ -280,9 +301,10 @@ img{
 
 
 .video{
+    background-image: url("https://i.ytimg.com/vi/FcnCbFUR2P8/maxresdefault.jpg");
+    background-size: cover;
     width: 1000px;
     height: 563px;
-    border: 1px solid;
     display: block;
     margin: 0 auto;
 }
@@ -307,6 +329,9 @@ img{
 .b3{ background-image: url('./img/50a8550a3e9c77e3e25de2314f0a101d.jpg'); }
 
 
+
+
+
 /* container 2 ----------------------------------------------------------------------------------- */
 
 .container_2{
@@ -319,7 +344,7 @@ img{
 .line{
     width: 100%;
     height: 1px;
-    background-color: lightgray;
+    background-color: whitesmoke;
 }
 
 .instagram{
@@ -351,3 +376,148 @@ img{
 .image_6 { background-image: url('./img/74611895_197463971414397_3298237989253924188_n.jpg')}
 
 
+/* footer ----------------------------------------------------------------------------------- */
+
+.footer{
+    background: white;
+    padding: 80px 0;
+}
+
+.container_3{
+    width: 1180px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.footer_menu{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+.footer_menu li{
+    color: #454545;
+    font-size: 11px;
+    margin: 0 10px;
+    letter-spacing: 1;
+}
+
+.input_box{
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid;
+    width: 300px;
+    margin-bottom: 30px;
+}
+.input{
+    width: 200px;
+    height: 30px;
+    border: none;
+    font-size: 14px;
+    padding: 5px 10px;
+}
+.search_box{
+    background: black;
+    color: white;
+    width: 74px;
+    height: 30px;
+    font-size: 12px;
+    letter-spacing: 1;
+    text-transform: uppercase;
+    line-height: 30px;
+}
+
+.input_box .search_box{
+    background: black;
+    color: white;
+    width: 74px;
+    height: 32px;
+    margin-left: -1px;
+}
+
+.sns_area{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+.sns_circle{
+    width: 32px;
+    height: 32px;
+    margin: 0 5px;
+    border: 1px solid #eaeaea;
+    border-radius: 50px;
+    position: relative;
+}
+
+.sns_circle:before{
+    position: absolute;
+    content: '';
+    width: 16px;
+    height: 16px;
+    top: 8px;
+    left: 8px;
+    background-size: cover;
+}
+.facebook:before{
+    background: url('./img/fb1.png');
+    background-repeat: no-repeat;
+    background-position: 2px;
+}
+.insta_2:before{
+    background: url('./img/in1.png');
+    background-repeat: no-repeat;
+}
+.blog:before{
+    background: url('./img/blog1.png');
+    background-repeat: no-repeat;
+}
+
+.tel{
+    font-weight: bold;
+    font-size: 15px;
+    letter-spacing: 1;
+    font-family: 'Nanum Gothic', sans-serif;
+
+}
+.tel_time{
+    font-size: 12px;
+    color: #8b8b8b;
+    margin-top: 5px;
+}
+.account{
+    font-size: 12px;
+    margin: 15px 0 50px;;
+    line-height: 22px;
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
+.footer_info{
+    font-size: 12px;
+    line-height: 20px;
+    color: #454545;
+    margin-bottom: 50px;
+}
+.gray{
+    color: #767676;
+    margin: 0 5px;
+}
+
+.copyright{
+    font-size: 10px;
+    color: #696969;
+    text-transform: uppercase;
+    letter-spacing: 1;
+    margin-bottom: 20px;
+}
+.copyright .bold{
+    color: black;
+}
+
+.site_icon{
+    background: url('./img/copy_logo.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 305px;
+    height: 20px;
+    margin: 0 auto;
+}

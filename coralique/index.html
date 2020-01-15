@@ -7,7 +7,7 @@
     <link href="../coralique/style.css" rel="stylesheet">
 </head>
 <body>
-
+   
 
     <!-- header ------------------------------------------------------------------------------------->
     <header id="header">
@@ -51,14 +51,19 @@
         </div>
     </header>
 
+    <div class="go_top">
+        <div class="gotop_icon"></div>
+    </div>
+  
+
 
 
      <!-- slide ----------------------------------------------------------------------------------- -->
 
     <div class="slide">
-        <img height="115%" class="active" id="slide_1" src="img/cc343849564b6e5784e466a9e568d22b.jpg" >
-        <img height="115%" id="slide_2" src="img/dd9b0783f597e022cec3b2b4186719f0.jpg" >
-        <img height="115%" id="slide_3" src="img/9d3751c545c89408023be2b9c22270d0.jpg" >
+        <img height="115%" class="slide_img active" src="img/cc343849564b6e5784e466a9e568d22b.jpg" >
+        <img height="115%" class="slide_img" src="img/dd9b0783f597e022cec3b2b4186719f0.jpg" >
+        <img height="115%" class="slide_img" src="img/9d3751c545c89408023be2b9c22270d0.jpg" >
         <div class="li_dot">
             <div class="dot dot_color"></div>
             <div class="dot"></div>
@@ -113,8 +118,7 @@
         </div>
         
 
-        <video class="video" src="https://www.youtube.com/af4411aa-baa9-4a66-a956-3085eeb21f58"></video>
-
+        <div class="video"></div>
         
         <div class="center_banner">
             <div class="banner b1"></div>
@@ -145,7 +149,53 @@
         
 
     <div class="footer">
+        <div class="container_3">
 
+            <div class="footer_menu">
+                <li>회사소개</li>
+                <li>이용약관</li>
+                <li>개인정보처리방침</li>
+                <li>이용안내</li>
+                <li>사업자정보확인</li>
+                <li>배송조회</li>
+            </div>
+            <div class="input_box">
+                <input class="input" type="text">
+                <div class="search_box">search</div>
+            </div>
+            <div class="sns_area">
+                <div class="sns_circle facebook"></div>
+                <div class="sns_circle insta_2"></div>
+                <div class="sns_circle blog"></div>
+            </div>
+
+            <div class="tel">080-804-1700</div>
+            <div class="tel_time">오전 11시~오후 6시 (12시~1시 30분 점심시간, 토, 일, 공휴일 제외)</div>
+            <div class="account">기업은행 02-6392-1700 <br> 예금주 : (주) 디지털슈퍼맨</div>
+
+            <div class="footer_info">
+                <span class="gray">운영사업자상호명</span> <span class="bold">(주) 디지털슈퍼맨</span>
+                <span class="gray">대표자</span> <span class="bold">이병곤</span>
+                <span class="gray">개인정보책인관리자</span> <span class="bold">류선숙</span>
+                <span class="gray">이메일</span> <span class="bold">2sryu@dititalsuperman.co.kr</span><br>
+                <span class="gray">사업자 등록 번호</span> <span class="bold">105-88-06909</span>
+                <span class="gray">통신 판매 신고 번호</span> <span class="bold">제 2017-서울마포-2213 호</span>
+                <span class="gray">주소</span> <span class="bold">서울시 매봉산로 37 1401호</span>
+                <span class="gray">대표 전화</span> <span class="bold">080-804-1700</span><br><br>
+                <span class="gray">위탁사업자상호명</span> <span class="bold">(주)우인에프씨씨</span>
+                <span class="gray">대표자</span> <span class="bold">변응헌</span>
+                <span class="gray">담당자이메일</span> <span class="bold">coralique@winfcc.co.kr</span><br>
+                <span class="gray">사업자 등록 번호</span> <span class="bold">206-81-65416</span>
+                <span class="gray">주소</span> <span class="bold">서울시 동일로 360 4층</span>
+            </div>
+
+            <div class="copyright">copyright (c) 2019 <span class="bold">coralique</span>all rights reserved / designed by ga09 design</div>
+
+            <div class="site_icon">
+            </div>
+        </div>
+        
+        
 
     </div>
 
@@ -167,7 +217,7 @@
             var index = 0;
             var i = 0;
             var _interval;
-            var length = $('img').length;
+            var length = $('.slide_img').length;
 
             $(document).on('click', '.dot', function(){
                 var index = $(this).index();
@@ -188,7 +238,7 @@
             };
 
             function change(_change){
-                $('img').removeClass('active').eq(_change).addClass('active');
+                $('.slide_img').removeClass('active').eq(_change).addClass('active');
                 $('.dot').removeClass('dot_color').eq(_change).addClass('dot_color');
             }
 
