@@ -1,0 +1,8 @@
+*{margin: 0; padding: 0;}
+.body{ display: flex; }
+.body_left{
+    border: 1px soild;
+}
+.body_right{
+    border: 1px soild;
+}

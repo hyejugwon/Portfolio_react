@@ -1,0 +1,123 @@
+.login_container{
+    width: 400px;
+    margin: 60px auto;
+    text-align: center;
+    margin-top: 320px;
+}
+.loginName{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+.underline{
+    width: 100%;
+    height: 4px;
+    background: black;
+    margin-bottom: 18px;
+}
+input{
+    width: 100%;
+    height: 48px;
+    padding: 0 14px;
+    line-height: 48px;
+    font-size: 14px;
+    color: #555555;
+    margin-top: 10px;
+    font-family: 'Noto Sans KR', sans-serif;
+    outline: none;
+}
+input:focus{
+    border: 1px solid;
+}
+.containLogin{
+    padding-top: 10px;
+    display: flex;
+    align-items: center;
+    margin-left: -3px;
+}
+.checkContain{
+    font-size: 12px;
+    color: #303033;
+    margin-left: 5px;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+.doLogin{
+    width: 100%;
+    height: 60px;
+    border-radius: 0;
+    background: black;
+    color: white;
+    margin: 30px 0;
+    font-size: 16px;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+.loginList{
+    display: flex;
+    justify-content: center;
+}
+.loginList_li{
+    margin: 0 15px;
+    position: relative;
+    font-size: 14px;
+}
+.loginList_li:before{
+    content: '';
+    position: absolute;
+    top: 0; right: -15px;
+    width: 1px; height: 18px;
+    background-color: #e0e0e0;
+}
+.loginList_li:last-child:before{
+    width: 0;
+}
+.snsLogin{
+    padding: 60px 0 16px 0;
+}
+.snsLoginName{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 14px;
+    color: #303033;
+    margin-bottom: 20px;
+}
+.sns{ position: relative; }
+.sns::before{
+    content: '';
+    position: absolute;
+    width: 20px; height: 20px;
+    top: 14px; left: 16px;
+    background: url(//img.29cm.co.kr/next29cm/sp_sns.png);
+    background-repeat: no-repeat;
+    background-size: 1000%;
+}
+.logNaver:before{
+    background-position: -106px -50px;
+}
+.logKakao:before{
+    background-position: -154px -50px;
+}
+.logFacebook:before{
+    background-position: -8px -50px;
+}
+.snsLogin button{
+    width: 100%;
+    height: 48px;
+    border: 1px solid #d4d4d4;
+    margin-bottom: 10px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 12px;
+    color: #5d5d5d;
+    cursor: pointer;
+}
+.preOrder2018{
+    margin-top: 10px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 12px;
+    color: #a0a0a0;
+}
+.preOrder2018{
+    cursor: pointer;
+}
+
+.check:hover{
+    cursor: pointer;
+}

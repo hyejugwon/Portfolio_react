@@ -1,0 +1,138 @@
+.MainBody{
+    display: flex;
+    margin-top: 320px;
+    width: 100%;
+    padding-bottom: 100px;
+}
+
+.body_left{
+    width: 43%;
+    flex-grow: 1;
+}
+.leftImage{
+    width: 100%;
+    margin-bottom: -5px;
+}
+.body_right{
+    width: 59.5%;
+    display: flex;
+    margin-left: 35px;
+}
+.bodyLine{
+    width: 1px; height: calc(100% + 100px);
+    border-right: 1px solid #d4d4d4;
+}
+.r_left{
+    width: calc((100% - 15px)/ 2);
+    box-sizing: content-box;
+}
+.r_right{
+    width: calc((100% - 15px)/ 2);
+    margin-right: 15px !important;
+}
+.left_main_img{
+    width: 100%;
+}
+.right_main_img{
+    width: 100%;
+}
+
+
+
+
+/* feed ------------------------------------------------------------------------------------------ */
+.feedContainer{
+    padding-top:80px;
+    margin: 0 40px;
+}
+span{
+    display: none;
+}
+.inlineBlocked{
+    display: inline-block;
+    width: 200px; height:4px;
+    background-color: black;
+    margin-left: -8px;
+    margin-bottom: 22px;
+}
+.feedBox{
+    position: relative;
+}
+.feedImage{
+    width: 100%;
+}
+/* sideBox ------------------------------------------------------------------------------------------ */
+.sideArea{
+    display: block;
+    margin-bottom: 58px;
+}
+.sideArea .sideBox{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    width: calc(100% - 10px);
+    height: 70px;
+    color: white;
+    margin: -30px 0 0 -20px;
+    z-index: 400;
+    padding: 0 15px;
+    background-color: #303030;
+}
+.sideArea .sideImage{
+    width: 44px; height: 44px;
+    border-radius: 50px;
+    margin-right: 15px;
+}
+.sideArea .sideText{
+    font-size: 13px;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+/* text ------------------------------------------------------------------------------------------ */
+.title{
+    width: calc(100% - 18px);
+    font-size: 22px;
+    font-weight: 600;
+    font-family: 'Noto Snas KR', sans-serif;
+    margin-bottom: 14px;
+}
+.subTitle{
+    width: calc(100% - 18px);
+    font-size: 15px;
+    font-family: 'Noto Snas KR', sans-serif;
+    line-height: 26px;
+    margin-bottom: 14px;
+    word-break: keep-all;
+}
+
+
+
+
+
+
+
+
+
+/* more ------------------------------------------------------------------------------------------ */
+
+.moreContainer{
+    display: flex;
+    justify-content: center;
+    margin: 0 50px 0 50px;
+    border-top: 1px solid #d4d4d4;
+    padding: 20px 0 100px;
+}
+.more{
+    width: 122px; height: 48px;
+    border: 2px solid;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 600;
+}
+.more:hover{
+    cursor: pointer;
+}
+
+
+
+

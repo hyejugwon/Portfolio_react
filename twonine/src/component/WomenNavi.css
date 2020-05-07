@@ -1,0 +1,43 @@
+.womenNaviContainer{
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    background: white;
+    padding: 25px;
+}
+.womenTitle{
+    font-size: 32px;
+    font-weight: 750;
+    font-family: 'Lato', sans-serif;
+    text-transform: uppercase;
+}
+.womenNaviLine{
+    width: 100%;
+    height: 4px;
+    background-color: black;
+    margin: 8px 0 15px;
+}
+.womenBtns button{
+    border: none;
+    width: 100%;
+    display: block;
+    text-align: left;
+    font-family: 'Lato', 'Noto Sans KR', sans-serif; 
+    font-size: 16px;
+    color: #5d5d5d;
+    text-transform: uppercase;
+    font-weight: 250;
+    padding: 5px 0;
+}
+.womenBtns .engBtn{
+    font-weight: 350;
+    padding: 7px 0;
+}
+.womenBtns .engBtn:first-child{
+    padding-top: 4px;
+}
+.womenBtns button:hover{
+    font-weight: 800;
+    cursor: pointer;
+    color: black;
+}

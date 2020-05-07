@@ -1,0 +1,210 @@
+.womenContainer{
+    margin-top: 320px;
+}
+.womenMainImg{
+    position: relative;
+}
+.topBackImg{
+    position: absolute;
+    z-index: -100;
+    width: 100%;
+    height: 680px;
+    background-image: url('../womenMain_img/a7ccefb234974a4cb074832375388b32_20200429155855.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.pre { 
+    position: absolute;
+}
+.next { 
+    position: absolute;
+}
+.naviArea{
+    padding: 24px 26px;
+}
+
+
+/* box2--------------------------------------------------------------- */
+
+
+.womenBox2{
+    padding: 150px 50px 0 230px;
+    width: 100%;
+    display: flex;
+}
+.WBox2Title{
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 38px;
+    font-family: 'Noto Sans KR', sans-serif;
+    margin: 5px 0 10px;
+    word-break: keep-all;
+}
+.WBox2Sub{
+    font-size: 15px;
+    font-family: 'Noto Sans KR', sans-serif;
+    word-break: keep-all;
+    line-height: 24px;
+    word-break: keep-all;
+}
+.womenBoxL{
+    /* border: 1px solid; */
+    position: relative;
+    width: 30%;
+    margin: 240px 80px 0;
+}
+.womenBoxL::before{
+    content: '';
+    position: absolute;
+    width: 200px; height: 4px;
+    background-color: black;
+    top: -35px; left: -25px;
+}
+.image1{
+    width: 100%;
+}
+
+
+
+.womenBoxR{
+    /* border: 1px solid; */
+    width: 60%;
+}
+
+.BoxRTop{
+    position: relative;
+    margin-bottom: 100px;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.BoxRTop .WBox2Sub{
+    width: 85%;
+}
+.BoxRTop::before{
+    position: absolute;
+    content: '';
+    width: 200px; height: 4px;
+    background-color: black;
+    top: -35px; left: -25px;
+}
+.image2{
+    width: 100%;
+}
+
+
+
+.BoxRBottom{
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    left: -30px;
+}
+.BoxRBottom::before{
+    position: absolute;
+    content: '';
+    width: 200px; height: 4px;
+    background-color: black;
+    top: -35px; left: -25px;
+}
+.image3{
+    width: 50%;
+    margin-right: 30px;
+}
+.textBox .WBox2Sub{
+    width: 105%;
+}
+
+
+
+/* box3--------------------------------------------------------------- */
+
+
+.womenBox3{
+    padding: 150px 50px 0 230px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+.WB3Contents{
+    /* border: 1px solid; */
+    width: calc((100% - 30px) / 2);
+    margin-bottom: 40px;
+}
+.WB3Contents img{
+    width: 100%;
+    margin-bottom: 10px;
+}
+.WBox3Title{
+    font-size: 23px;
+    font-family: 'Loto Sans KR', sans-serif;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.WBox3Sub{
+    font-family: 'Loto Sans KR', sans-serif;
+    font-size: 15px;
+    line-height: 24px;
+    word-break: keep-all;
+}
+
+
+.goShow{
+    width: 160px;
+    height: 40px;
+    color: #5d5d5d;
+    border: 1px solid #d4d4d4;
+    font-size: 13px;
+    font-family: 'Noto Sans KR', sans-serif;
+    margin: 19px 0 0;
+    padding: 11px 50px 9px 14px;
+    position: relative;
+    text-align: left;
+}
+.goShow::after{
+    position: absolute;
+    content: '';
+    width: 33px; height: 7px;
+    background-image: url(https://img.29cm.co.kr/next29cm/ico_top_feed.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    top: 16px; right: 14px;
+}
+
+
+
+/* box4--------------------------------------------------------------- */
+.wrapMenu{
+    /* border: 1px solid; */
+    width: 100%;
+}
+.wrapMenu li{
+    user-select: none;
+    display: inline-block;
+    border-top: 1px solid #d4d4d4;
+    border-left: 1px solid #d4d4d4;
+    width: calc(100% / 3);
+    height: 72px;
+    color: #a0a0a0;
+    font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    line-height: 72px;
+    text-align: center;
+    cursor: pointer;
+}
+.wrapMenu li:first-child{
+    border-left: 0;
+}
+.wrapMenuActive{
+    background-color: #303033;
+    color: white !important;
+}
+.wrapItemsBox {
+    width: 100%;
+    background-color: #303033;
+    padding: 50px 100px 40px;
+}
