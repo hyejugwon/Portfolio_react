@@ -33,10 +33,16 @@
     "dotenv-webpack": "^1.7.0",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
+    "react-dropdown": "^1.7.0",
     "react-icons": "^3.9.0",
     "react-id-swiper": "^3.0.0",
+    "react-live-clock": "^4.0.5",
     "react-redux": "^7.2.0",
     "react-router-dom": "^5.1.2",
-    "redux": "^4.0.5"
+    "react-slick": "^0.25.2",
+    "reactstrap": "^8.4.1",
+    "redux": "^4.0.5",
+    "semantic-ui-react": "^0.88.2",
+    "swiper": "^5.3.8"
   }
 }

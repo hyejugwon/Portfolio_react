@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react';
 import './LookBook.css';
-import LOOKBOOKLI from '../jsons/lookBook.json';
+import LOOKBOOKLI from '../component/Lookbook/lookBook.json'
 
 const Lookbook = () => {
     const [ view, setView ] = useState([ LOOKBOOKLI ]);

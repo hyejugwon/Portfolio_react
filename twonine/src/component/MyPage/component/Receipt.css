@@ -1,0 +1,62 @@
+.myPageTitleArea{
+    width: 100%;
+    padding-bottom: 20px;
+    border-bottom: 4px solid;
+}
+.myPageTitleArea h3{
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+.myPageTitleArea p{
+    font-size: 14px;
+    color: #5d5d5d !important;
+    line-height: 20px;
+}
+.ReceiptTable{ 
+    border-bottom: 1px solid #d4d4d4;
+    height: 50px;
+    line-height: 50px;
+}
+.ReceiptTable ul { display: flex; }
+.ReceiptTable ul li { text-align: center; }
+.ReceiptTable .product { flex-grow: 1; }
+
+.receiptTableSet{ display: flex; align-items: center;}
+.receiptTableSet li { width: calc(100% / 3); }
+
+.issuanceList { height: 50px; width: 100%;}
+.issuanceList ul { 
+    display: flex; 
+    width: 100%;
+    text-align: center;
+    align-items: center;
+}
+.issuanceList li { 
+    border-bottom: 1px solid #d4d4d4; 
+    height: 50px;
+    line-height: 50px;
+    font-size: 14px;
+}
+.issuanceList button{
+    width: 96px; height: 34px;
+}
+.issuanceList ul .product{
+    flex-grow: 1;
+}
+
+@media screen and (min-width : 1300px){
+    .receiptTableSet{ min-width: 440px; }
+    .ReceiptTable .orderDate { min-width: 300px; }
+    .issuanceList .orderDate { min-width: 127px; }
+}
+@media screen and (min-width : 1000px) and (min-width: 1300px){
+    .receiptTableSet{ min-width: 345px; }
+    .ReceiptTable .orderDate { min-width: 80px; }
+    .issuanceList .orderDate { min-width: 80px; }
+}
+@media screen and (max-width : 1000px){
+    .receiptTableSet{ min-width: 300px; }
+    .ReceiptTable .orderDate { min-width: 80px; }
+    .issuanceList .orderDate { min-width: 80px; }
+}

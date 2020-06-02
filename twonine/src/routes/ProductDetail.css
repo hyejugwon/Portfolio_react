@@ -1,0 +1,400 @@
+.productDetailContainer{
+    width: 100%;
+}
+.productArea{
+    width: 1200px;
+    margin: 0 auto;
+}
+.categoryShowArea{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.detailCategory{
+    position: relative;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px; font-weight: 600; text-transform: uppercase;
+}
+.detailCategory::after{
+    position: absolute;
+    content: '';
+    width: 22px; height: 22px;
+    background-image: url('../home_img/dropDown.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    top: -1px; right: -25px;
+}
+.korean{
+    font-family: 'Noto Sans KR',sans-serif;
+    font-weight: 400;
+    margin-top: 3px;
+    margin-left: 60px;
+}
+.korean:before{
+    position: relative;
+    content: '/';
+    left: -18px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.brandArea{
+    margin-top: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: left;
+}
+.brandArea img{
+    width: 70px;
+}
+.brandInfoArea{
+    margin-left: 15px;
+}
+.brandInfoArea .brandName{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+}
+.brandInfoArea .brandDescription{
+    font-size: 13px;
+    font-family: 'Montserrat', 'Noto Sans KR', sans-serif;
+    font-weight: 300;
+}
+.brandInfoArea .goBrandHome{
+    display: inline-block; 
+    height: 25px; line-height: 25px;
+    border: 1px solid #e5e5e5;
+    font-family: 'Montserrat', 'Noto Sans KR', sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    padding: 0 5px;
+    text-transform: uppercase;
+    margin-top: 6px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.productImportantArea{
+    display: flex;
+    width: 1200px;
+}
+
+.productImportantArea img{
+    width: 564px;
+}
+.productImportantArea .importantInfo{
+    margin-left: 48px;
+    width: 50%;
+    border-top: 2px solid black;
+}
+
+.infoTop{
+    display: flex;
+    margin-top: 25px;
+    font-family: 'Montserrat', 'Noto Sans KR', sans-serif; 
+    font-weight: 700; font-size: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e5e5e5;
+}
+.namePrice{
+    flex-grow: 1;
+}
+.productName{
+    margin-bottom: 20px;
+}
+.productPrice{
+    color: #a0a0a0;
+    text-decoration: line-through;
+    font-size: 14px; font-weight: 600;
+}
+.red{
+    color: #ff4800;
+}
+
+
+
+
+
+
+.reviewArea{
+    display: flex;
+    margin-bottom: 25px;
+}
+.reviewArea ul{
+    display: flex;
+    margin-right: 20px;
+}
+.reviewArea ul path{
+    fill: rgb(0, 0, 0); 
+    fill-rule: evenodd; 
+    stroke: rgb(212, 212, 212); 
+    stroke-width: 0;
+}
+.goReview{
+    margin-top: -3px;
+    font-family: 'Montserrat', 'Noto Sans KR', sans-serif; 
+    font-size: 10px; font-weight: 500;
+    text-decoration: underline;
+}
+
+
+
+
+.buyArea{
+    display: flex;
+    font-family: 'Montserrat', 'Noto Sans KR', sans-serif; 
+    margin: 20px 0;
+}
+.userHeartArea{
+    position: relative;
+}
+.userHeartArea::before{
+    position: absolute;
+    content: '';
+    width: 1px; height: 90px;
+    background-color: #e5e5e5;
+    top: -30px; left: -30px;
+}
+.userHeartArea span{
+    display: inline-block;
+    color: black;
+    font-size: 12px;
+    font-weight: 500;
+    margin-left: 12px;
+}
+
+
+
+.benefit{
+    padding: 18px 0;
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+    font-family: 'Noto Sans KR', sans-serif;
+    margin-bottom: 10px;
+}
+.benefit div{
+    display: flex;
+}
+.benefit span{
+    display: inline-block;
+    margin-right: 30px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.benefit ul li{
+    font-weight: 300;
+}
+.benefit ul .free{
+    margin-top: 10px;
+    font-size: 11px;
+    text-decoration: underline;
+}
+
+
+
+.options{
+    width: 100%;
+}
+.options li{
+    position: relative;
+    border: 1px solid #d4d4d4;
+    height: 36px; line-height: 36px;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px; font-weight:500;
+    padding: 0 20px;
+    margin-bottom: 4px;
+}
+.options li::after{
+    position: absolute;
+    content: '';
+    width: 26px; height: 26px;
+    background-image: url('../home_img/downDirection.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    top: 4px; right: 5px;
+}
+
+
+
+
+
+
+.buyBtn{
+    cursor: pointer;
+    outline-style: none;
+    text-transform: uppercase;
+    font-size: 14px;
+    width: calc(100% / 2); height: 50px;
+    text-align: center;
+    font-weight: 700;
+}
+.shoppingBag{
+    border: 1px solid #d4d4d4;
+}
+.buyNow{
+    border: none;
+    background-color: black;
+    color: white;
+    box-shadow: 8px 8px 12px rgba(0,0,0,0.3);
+}
+
+
+.moreBenefit{
+    width: 100%; height: 60px;
+    line-height: 60px;
+    border: 1px solid #d4d4d4;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 14px; font-weight: bold;
+    padding: 0 20px;
+    background: rgb(246, 246, 246)
+}
+.moreBenefit span{
+    display: inline-block;
+}
+
+
+
+
+.productEtcArea{
+    padding: 40px 0 25px;
+}
+.etc{
+    border-bottom: 1px solid #d4d4d4;
+    padding-bottom: 20px;
+}
+.etc{
+    font-size: 14px;
+    margin-bottom: 15px;
+    margin-right: 3px;
+}
+.etc span{
+    display: inline-block;
+}
+.etcInfoTitle{
+    color: #303030;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 16px !important; font-weight: 600;
+    margin-bottom: 15px;
+}
+.productCode{
+    display: flex;
+    margin-bottom: 15px;
+}
+.shippingInfo{
+    display: flex;
+}
+.shippingInfo .blue{
+    color: blue;
+    display: inline-block;
+}
+.shippingInfo span{
+    margin-left: 5px;
+    line-height: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.productDetailImageArea{
+    width: 1200px;
+    margin: 0 auto;
+    margin-top: 80px;
+}
+.banner{
+    width: 1200px;
+    margin-bottom: 100px;
+}
+
+
+.detailInfo{
+    width: 1000px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+.ProductImages{
+    width: 1000px;
+    margin: 0 auto;
+}
+.ProductImages .title{
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+
+.detailInfo .title{
+    border-bottom: 3px solid black;
+    padding-bottom: 12px;
+    margin-bottom: 1px;
+    width: 100%;
+}
+.showInfoShow .list{
+    display: flex;
+}
+.cartBold{
+    font-weight: 600;
+    width: 240px;
+}
+.showInfoShow .list ul li{
+    border: 1px solid #d4d4d4;
+    height: 54px;
+    margin-top: -1px;
+    line-height: 54px;
+    padding: 0 20px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 14px;
+}
+.flexGrow{
+    margin-left: -1px;
+    flex-grow: 1;
+}
+
+
+
+
+
+.brandBigArea{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.brandImage{
+    position: relative;
+    width: 1000px;
+    margin: 0 auto;
+}

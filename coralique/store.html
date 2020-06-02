@@ -1,0 +1,190 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+    <link href="../coralique/store_style.css" rel="stylesheet">
+</head>
+<body>
+     <!-- header ------------------------------------------------------------------------------------->
+     <header id="header">
+            <div class="header_top">
+                <div class="top_left">
+                    <div class="bookmark"></div>
+                    <p class="margin">LOGIN</p>
+                    <p>JOIN</p>
+                </div>
+                <div class="top_right">
+                    <p>SEARTCH</p>
+                    <p>MY PAGE</p>
+                    <p id="bag"></p>
+                </div>
+            </div>
+            <div class="big_logo">
+                <div class="logo"></div>
+            </div>
+            <div class="nav">
+                <a href="store.html">ONLINE STORE
+                    <div class="li_list">
+                        <li>One piece</li>
+                        <li>Bikini</li>
+                        <li>Rash guard</li>
+                        <li>Resort wear</li>
+                        <li>Accessories</li>
+                        <li>+ L size</li>
+                    </div>
+                </a>
+                <a>BRAND STORY</a>
+                <a>LOOKBOOK</a>
+                <a>EVENT</a>
+                <a>COMMUNITY
+                    <div class="li_list">
+                        <li>Notice</li>
+                        <li>Q&A</li>
+                        <li>Review</li>
+                        <li>FAQ</li>
+                    </div>
+                </a>
+            </div>
+        </header>
+    
+        <a class="go_top"></a>
+
+        <div class="container_category">
+            <li onclick="fil(0)">전체보기</li>
+            <li onclick="fil(1)">One piece</li>
+            <li onclick="fil(2)">Bikini</li>
+            <li onclick="fil(3)">Rash Guard</li>
+            <li onclick="fil(4)">Resort</li>
+            <li onclick="fil(5)">Accessories</li>
+            <li onclick="fil(6)">+ L size</li>
+        </div>
+
+        <div class="container_contents"></div>
+        <ul class="pagination"></ul>
+  
+
+
+
+    <script>
+        $(document).ready(function(){
+            var items = [];
+            var view = 15;
+            var length, total, pageHtml = '', pageNum = 0, html = '', text = '';
+
+            var pdt = [
+                { id: 1, name: "[신상품] 스노위 썸머 원피스 옐로우그레이 CQ-LS20201_YG", price: 79000, rec: true, new: true, update: true, bye: false, src: "823f28d7f7945949afd3393507ea3842.jpg" },
+                { id: 2, name: "[신상품] 스노위 썸머 원피스 화이트블루 CQ-LS20201_WB", price: 79000, rec: true, new: true, update: true, bye: false, src: "d6e0c79a1c803d40a104358e38693e04.jpg" },
+                { id: 3, name: "[신상품] 레몬 워터밤 비키니 CQ-LS20301_YB", price: 74000, rec: true, new: true, update: false, bye: false, src: "0a932b2989ba7ae692ea262810c12014.jpg" },
+                { id: 4, name: "[신상품] 레이지 모먼트 자카드 원피스 CQ-LS20203_WK", price: 64000, rec: true, new: true, update: false, bye: false, src: "540367959eca107299f93de33226a084.jpg" },
+                { id: 5, name: "[신상품] 레이지 모먼트 자카드 원피스 CQ-LS20203_KW", price: 64000, rec: true, new: true, update: false, bye: false, src: "813705b843ce380d849f8700205b9d64.jpg" },
+                { id: 6, name: "[신상품] 소프트 피치 원피스 수영복_CQ-LS20202_OG", price: 79000, rec: true, new: true, update: false, bye: false, src: "0222b80f6f0df5d1a498bd703016c410.jpg" },
+                { id: 7, name: "블랙 레이스 탑_CQ-TS19522_KK", price: 44000, rec: true, new: false, update: false, bye: false, src: "ca58e399b4e0dcfe24cca2dbd2232250.jpg" },
+                { id: 8, name: "비치 모자 스트랩 오렌지_CO-CA19504-ZO", price: 5000, rec: false, new: false, update: false, bye: false, src: "4be42064a915bab7f009f5dcf26afbd0.jpg" },
+                { id: 9, name: "비치 모자 스트랩 블랙_CO-CA19504-ZK", price: 5000, rec: false, new: false, update: false, bye: false, src: "97fd3d7b0c37c7d66b8269f15aa20c41.jpg" },
+                { id: 10, name: "비치 모자 스트랩 그린_CO-CA19504-ZE", price: 5000, rec: false, new: false, update: false, bye: false, src: "60f1f705e638564f3c1517387c4f83e6.jpg" },
+                { id: 11, name: "PVC 섬머 백_CO-CB19502_AZ", price: 29000, rec: false, new: false, update: false, bye: false, src: "56259eb04a80a98efc1d99713a9ab19b.jpg" },
+                { id: 12, name: "PVC 홀로그램 쇼퍼백_CO-CB19501_XX", price: 49000, rec: false, new: false, update: false, bye: false, src: "430ed042aab2275275d97a5f6a73436c.jpg" },
+                { id: 13, name: "코튼 딥 버킷햇 화이트_CO-CC19502-WW", price: 35000, rec: true, new: false, update: false, bye: false, src: "ef76d9b6a0547b726160fcb3fcf02459.jpg" },
+                { id: 14, name: "비치 버킷 햇 블랙_CO-CC19502-KK", price: 35000, rec: false, new: false, update: false, bye: true, src: "feb63f408aea1e55d41a4409fbd2abd4.jpg" },
+                { id: 15, name: "컬러풀 양말 옐로우_CO-CA19501-YY", price: 4000, rec: false, new: false, update: false, bye: false, src: "6f918409719eaa322852aece379c6640.jpg" },
+                { id: 16, name: "컬러풀 양말 화이트_CO-CA19501-WW", price: 4000, rec: false, new: false, update: false, bye: false, src: "823f28d7f7945949afd3393507ea3842.jpg" },
+                { id: 17, name: "컬러풀 양말 민트_CO-CA19501-MM", price: 4000, rec: false, new: false, update: false, bye: true, src: "823f28d7f7945949afd3393507ea3842.jpg" },
+                { id: 18, name: "컬러풀 양말 블랙_CO-CA19501-KK", price: 4000, rec: false, new: false, update: false, bye: false, src: "823f28d7f7945949afd3393507ea3842.jpg" },
+                { id: 19, name: "하프 스트랩 비치 모자 베이지블랙_CO-CC19501-ZK", price: 35000, rec: false, new: false, update: false, bye: false, src: "823f28d7f7945949afd3393507ea3842.jpg" },
+                { id: 20, name: "하프 스트랩 비치 모자 베이지그린_CO-CC19501-ZE", price: 35000, rec: false, new: false, update: false, bye: false, src: "823f28d7f7945949afd3393507ea3842.jpg" },
+                { id: 21, name: "컬러풀 헤어밴드 오렌지_CO-CH19501_OO", price: 15000, rec: false, new: false, update: false, bye: false, src: "823f28d7f7945949afd3393507ea3842.jpg" },
+                { id: 22, name: "컬러풀 헤어밴드 블랙_CO-CH19501_KK", price: 15000, rec: true, new: false, update: false, bye: false, src: "823f28d7f7945949afd3393507ea3842.jpg" },
+                { id: 23, name: "컬러풀 헤어밴드 그린_CO-CH19501_EE", price: 15000, rec: false, new: false, update: false, bye: false, src: "823f28d7f7945949afd3393507ea3842.jpg" },
+                { id: 24, name: "컬러풀 헤어밴드 블루_CO-CH19501_BB", price: 15000, rec: false, new: false, update: false, bye: false, src: "823f28d7f7945949afd3393507ea3842.jpg" }
+            ]
+
+            var id, name, price, rec, recTag, new2, newTag, update, updateTag, src, bye, byeTag;
+            var html = '';
+            var txt = '';
+
+
+            for(var i in pdt){
+                id = pdt[i].id;
+                name = pdt[i].name;
+                price = pdt[i].price;
+                src = pdt[i].src;
+                rec = pdt[i].rec;
+                recTag = '';
+                new2 = pdt[i].new;
+                newTag = '';
+                update = pdt[i].update;
+                updateTag = '';
+                bye= pdt[i].bye;
+                byeTag = '';
+                if(new2){
+                    newTag = `<img class='newIcon' src='img_store/icon_global_01.gif'>`
+                }
+                if(rec){
+                    recTag = `<img class='recIcon' src='img_store/ico_product_recommended.gif'>`
+                }
+                if(update){
+                    updateTag = `<img class='updateIcon' src='img_store/icon_global_02.gif'>`
+                }
+                if(bye){
+                    byeTag = `<img class='byeIcon' src='img_store/ico_product_soldout.gif'>`
+                }
+            }
+
+            txt = 
+                `<div class='item'>
+                    <input type = 'hidden' class="itemId" value = "${id}">
+                    <div class='img_contents'>
+                        <img src = 'img_store/${src}'>
+                    </div>
+                    <div class='name'>${name}</div>
+                    <div class='price'>￦ ${price}</div>
+                    ${recTag}
+                    ${newTag}
+                    ${updateTag}
+                    ${byeTag}
+                </div>`;
+                console.log(txt);
+                html = html + txt;
+                $('.container_contents').html(html);
+
+
+
+
+            var items = [];
+            var view = 15;
+            var length, total, pageHtml = '', pageNum = 0, html = '', text = '';
+
+            makePagination();
+            function makePagination(){
+                length = items.length;
+                total = Math.ceil(length/view);
+                for(var i = 1; i<= total; i++){
+                    pageHtml += `<li>${i}</li>`
+                }
+                $('.pagination').html(pageHtml);
+                setPage(pageNum);
+            }
+            
+            function setPage(page){
+                setDocument();
+            }
+
+            function setDocument(){
+                var start = pageNum * view;
+                var end = start + view - 1;
+
+                if(end > length -1){
+                    end = length - 1;
+                }
+            }
+            $('.pagination').html(html);
+
+
+            
+            })
+        
+    </script>
+</body>
+</html>

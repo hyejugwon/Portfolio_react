@@ -1,0 +1,217 @@
+*{margin: 0; padding: 0; list-style: none; box-sizing: border-box; font-family: 'Lato', 'Nanum Gothic', sans-serif;}
+
+
+
+header{
+    display: block;
+    width: 100%;
+    z-index: 100;
+    transition: .3s;
+}
+header:hover{
+    background-color: white;
+    transition: .3s;
+}
+body{
+    position: relative;
+}
+.opacity_white{
+    z-index: 500px;
+    position: fixed;
+    height: 118px;
+    background: rgba(255, 255, 255, 0.7);
+    transition: .3s;
+}
+.header_top{
+    position: fixed;
+    left: 0;
+    right: 0;
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    width: 1180px;
+    margin: 0 auto;
+    font-size: 11px;
+    font-family: 'Lato', sans-serif;
+}
+.top_left{
+    display: flex;
+    letter-spacing: 1px;
+}
+.bookmark{
+    width: 11px;
+    height: 16px;
+    margin-right: 16px;
+    background-image: url("./img/bookmark.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.top_left .margin{
+    margin-right: 10px;
+}
+.top_right{
+    display: flex;
+}
+.top_right p{
+    margin-right: 20px;
+    letter-spacing: 1px;
+}
+#bag{
+    background-image: url("./img/carticon.png");
+    background-repeat: no-repeat;
+    width: 13px;
+    height: 16px;
+    margin-right: 0;
+}
+.big_logo{
+    text-align: center;
+    padding: 54px 0 30px; 
+}
+.logo{
+    display: inline-block;
+    width: 259px;
+    height: 34px;
+    background-image: url("./img/logo.png");
+    background-repeat: no-repeat;
+}
+.scroll_logo{
+    position: fixed;
+    left: 0;
+    right: 0;
+    margin: -26px auto 0 auto;
+    width: 152px;
+    background-size: 100%;
+    transition: .2s;
+}
+.nav{
+    width: 1180px;
+    height: 60px;
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+}
+.scroll_nav{
+    position: fixed;
+    left: 0;
+    right: 0;
+    margin-top: -28px;
+    transition: .4s;
+}
+.nav a{
+    display: flex;
+    position: relative;
+    height: 60px;
+    padding: 0 23px;
+    align-items: center;
+    font-size: 12px;
+    font-family: 'Lato', sans-serif;
+    letter-spacing: 1px;
+    transition: .3s;
+    text-decoration: none;
+    color: black;
+}
+.nav a:hover{
+    color: #dd8437;
+    transition: .3s;
+    cursor: pointer;
+}
+.nav a:hover > .li_list{
+    opacity: 1;
+    transition: .3s;
+    cursor: pointer;
+}
+.li_list{
+    transition: .3s;
+    opacity: 0;
+    position: absolute;
+    top: 60px;
+    left: calc(50% - 78px);
+    width: 150px;
+    text-align: center;
+    background-color: white;
+    color: black;
+}
+.li_list li{
+    height: 24px;
+    line-height: 24px;
+    font-size: 11px;
+    font-family: 'Lato', sans-serif;
+}
+.li_list li:hover{
+    color: #dd8437;
+    transition: .3s;
+    cursor: pointer;
+}
+.li_list li:last-child{
+    height: 24px;
+    margin-bottom: 8px;
+}
+
+.go_top{
+    position: absolute;
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 1000;
+    width: 24px;
+    height: 62px;
+    background: url('./img/gotop.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+    opacity: 0;
+}
+.go_top_opacity{
+    opacity: 1;
+    transition: .6s;
+}
+
+
+.container_category{
+    width: 1180px;
+    height: 85px;
+    margin: 0 auto;
+    margin-top: 70px;
+    margin-bottom: 100px;
+    padding: 0 80px;
+    border: 1px solid #eaeaea;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.container_category li{
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1;
+    font-family: 'Lato', sans-serif;
+}
+
+.container_contents{
+    width: 1180px;
+    margin: 0 auto;
+}
+
+.item{ position: relative;}
+.item .img_contents{ width: 380px; height: 488px;}
+.img_contents img{ width: 380px; height:  488px;}
+.item .name{
+    font-size: 12px;
+    font-family: 'Lato', sans-serif;
+    margin-top: 15px;
+}
+.item .price{
+    color: #7d7d7d;
+    font-size: 11px;
+    font-family: 'Lato', sans-serif;
+    margin: 5px 0 8px 0;
+}
+.newIcon{width: 30px; height: 16px; margin-right: 2px;}
+.recIcon{width: 34px; height: 16px; margin-right: 2px;}
+.updateIcon{width: 50px; height: 16px;}
+.byeIcon{width: 30px; height: 16px;}
+
+
+.pagination{ display: flex; margin: 50px auto; width: 1180px; height: 34px; justify-content: center; }
+.pagination li { user-select: none; cursor: pointer; list-style: none; padding: 5px 10px; font-size: 12px; color: #979797;}
+.page_active{ color: black; }

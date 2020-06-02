@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import './Main.css';
-import LEFTIMAGE from '../jsons/homeleft.json';
-import RIGHTBOX from '../jsons/rightBox.json';
-import LEFTBOX from '../jsons/leftBox.json';
+import LEFTIMAGE from '../component/Shop/jsons/homeleft.json';
+import RIGHTBOX from '../component/Shop/jsons/rightBox.json';
+import LEFTBOX from '../component/Shop/jsons/leftBox.json';
 
 const Main = () => {
     console.log(LEFTIMAGE)
@@ -12,15 +12,10 @@ const Main = () => {
 
     useEffect(() => {
         setView(LEFTIMAGE);
-    }, []);
-
-    useEffect(() => {
         setView2(LEFTBOX);
-    }, []);
-
-    useEffect(() => {
         setView3(RIGHTBOX);
     }, []);
+
     
 
 

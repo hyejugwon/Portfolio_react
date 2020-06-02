@@ -1,0 +1,183 @@
+.ListViewAreaAll{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: left;
+    margin: 20px 0 50px 20px;
+}
+
+@media screen and (min-width : 1480px) {
+    .ListViewAreaAll{
+        width: calc((100% - 80px) / 4);
+    }
+}
+
+@media screen and (min-width : 1160px) and (max-width : 1480px){
+    .ListViewAreaAll{
+        width: calc((100% - 60px) / 3);
+    }
+}
+@media screen and (max-width : 1160px){
+    .ListViewAreaAll{
+        width: calc((100% - 40px) / 2);
+    }
+}
+
+
+.sampleBox .image{
+    position: relative;
+}
+.sampleBox .image img{
+    width: 100%;
+}
+.sampleBox:hover{
+    cursor: pointer;
+}
+.spanIcons{
+    width: 100%;
+    height: 25px;
+    position: absolute;
+    overflow: hidden;
+    bottom: 25px; right: 0;
+}
+.spanIcons span{
+    float: left;
+    display: none;
+}
+.show{
+    display: block !important;
+}
+.sale{
+    width: 25px; height: 25px;
+    background-color: #ff4800;
+    color: white;
+    line-height: 25px;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+}
+.bestCoupon{
+    width: 25px; height: 25px;
+    background-color: #a0a0a0;
+    color: white;
+    line-height: 25px;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+}
+.new{
+    width: 25px; height: 25px;
+    background-color: black;
+    color: white;
+    line-height: 25px;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+}
+.soldOut{
+    width: 76px; height: 25px;
+    background-color: #d4d4d4;
+    color: white;
+    line-height: 25px;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.sampleBox .brand{
+    color: black;
+    font-weight: bold;
+}
+.sampleBox .name{
+    color: #5d5d5d;
+    font-size: 12px;
+    font-weight: 400;
+    margin-bottom: 16px;
+    height: auto;
+}
+.sampleBox .price{
+    font-size: 12px;
+    color: #d4d4d4;
+    font-weight: 400;
+    margin-bottom: 0;
+}
+.blackPrice .price{
+    font-size: 14px;
+    color: black;
+    font-weight: 600;
+}
+.unit{
+    display: none;
+}
+.blackPrice .unit{
+    display: block;
+    font-size: 12px;
+    color: black;
+    margin-top: 1px;
+}
+.saleBox{
+    display: flex;
+    font-size: 14px;
+    color: #ff4800;
+    font-weight: 700;
+}
+.rate{
+    margin-right: 10px;
+}
+.redPrice .saleBox .unit{
+    display: block;
+    font-size: 12px;
+    color: #ff4800;
+    font-weight: 400;
+    margin-top: 1px;
+}
+.saleBox .unit{
+    display : none;
+}
+
+
+.ListViewAreaAll .userSelec{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    justify-content: left;
+    color: #5d5d5d;
+}
+.userSelec .heart{
+    display: flex;
+    margin-right: 30px;
+}
+.userSelec .review{
+    display: flex;
+}
+.ListViewAreaAll .userSelec .count {
+    font-size: 13px;
+    margin-top: 3px;
+}
+
+.ListViewAreaAll .userSelec:hover{
+    cursor: pointer;
+}
+
+
+.noneHeart span{
+    width: 20px; height: 20px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+.fullHeart span{
+    display: none;
+}
+
+.noneHeart .checked{
+    width: 0;
+}
+.fullHeart .checked{
+    width: 20px; height: 20px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    color: #ff4800;
+    margin-bottom: 3px;
+}

@@ -4,7 +4,7 @@
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
-    <link href="../coralique/style.css" rel="stylesheet">
+    <link href="../coralique/index_style.css" rel="stylesheet">
 </head>
 <body>
    
@@ -27,33 +27,31 @@
             <div class="logo"></div>
         </div>
         <div class="nav">
-            <ul>ONLINE STORE
+            <a href="store.html">ONLINE STORE
                 <div class="li_list">
-                    <li>One peice</li>
+                    <li>One piece</li>
                     <li>Bikini</li>
                     <li>Rash guard</li>
                     <li>Resort wear</li>
                     <li>Accessories</li>
                     <li>+ L size</li>
                 </div>
-            </ul>
-            <ul>BRAND STORY</ul>
-            <ul>LOOKBOOK</ul>
-            <ul>EVENT</ul>
-            <ul>COMMUNITY
+            </a>
+            <a>BRAND STORY</a>
+            <a>LOOKBOOK</a>
+            <a>EVENT</a>
+            <a>COMMUNITY
                 <div class="li_list">
                     <li>Notice</li>
                     <li>Q&A</li>
                     <li>Review</li>
                     <li>FAQ</li>
                 </div>
-            </ul>
+            </a>
         </div>
     </header>
 
-    <div class="go_top">
-        <div class="gotop_icon"></div>
-    </div>
+    <a class="go_top"></a>
   
 
 
@@ -61,9 +59,11 @@
      <!-- slide ----------------------------------------------------------------------------------- -->
 
     <div class="slide">
-        <img height="115%" class="slide_img active" src="img/cc343849564b6e5784e466a9e568d22b.jpg" >
-        <img height="115%" class="slide_img" src="img/dd9b0783f597e022cec3b2b4186719f0.jpg" >
-        <img height="115%" class="slide_img" src="img/9d3751c545c89408023be2b9c22270d0.jpg" >
+        <div class="slide_images">
+            <div class="slide_img s_img1"></div>
+            <div class="slide_img s_img2"></div>
+            <div class="slide_img s_img3"></div>
+        </div>
         <div class="li_dot">
             <div class="dot dot_color"></div>
             <div class="dot"></div>
@@ -80,39 +80,43 @@
             <div class="best_item">
                 <p>BEST ITEM</p>
                 <div class="container_dot">
-                    <div class="dot dot_color"></div>
-                    <div class="dot"></div>
-                    <div class="dot"></div>
-                    <div class="dot"></div>
+                    <div class="dot2 dot_color"></div>
+                    <div class="dot2"></div>
+                    <div class="dot2"></div>
+                    <div class="dot2"></div>
                 </div>
             </div>
             
-            <div class="wrapper">
-                <div class="arrow arrow_left"></div>
-                <div class="arrow arrow_right"></div>
-                <ul class="list">
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ul>
-                <ul class="slide">
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ul>
-                <ul class="slide">
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ul>
-                <ul class="slide">
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
+            <div class="wrapper_c">
+                <div class="arrow arrow_pre"></div>
+                <div class="arrow arrow_next"></div>
+                <div class="wrapper">
+                    <div class="wrap">
+                        <ul class="slide_wrap">
+                            <li>1</li>
+                            <li>1</li>
+                            <li>1</li>
+                            <li>1</li>
+                        </ul>
+                        <ul class="slide_wrap">
+                            <li>2</li>
+                            <li>2</li>
+                            <li>2</li>
+                            <li>2</li>
+                        </ul>
+                        <ul class="slide_wrap">
+                            <li>3</li>
+                            <li>3</li>
+                            <li>3</li>
+                            <li>3</li>
+                        </ul>
+                        <ul class="slide_wrap">
+                            <li>4</li>
+                            <li>4</li>
+                            <li>4</li>
+                            <li>4</li>
+                        </div>
+                    </div>
                 </ul>
             </div>
         </div>
@@ -267,9 +271,62 @@
                 }
             })
 
+            $(window).scroll(function(){
+                scrollTop = $(window).scrollTop();
+                if(scrollTop > 0){
+                    $('.go_top').addClass('go_top_opacity');
+                }else{
+                    $('.go_top').removeClass('go_top_opacity');
+                }
+            })
 
 
+            // --------------------------------------------------------------
 
+            
+            var wrap_index = 0;
+            var timer = 300;
+            var width = $('.slide_wrap').width();
+            var wrap_length = $('.slide_wrap').length;
+            var animation = false;
+
+            
+            
+            $(document).on('click', '.arrow_pre', function(){
+                if(wrap_index <= 0 || animation){
+                    return;
+                }
+                animation = true;
+                wrap_index--;
+                console.log(wrap_index)
+                move(wrap_index);
+            });
+
+            $(document).on('click', '.arrow_next', function(){
+                if(wrap_index >= 3 || animation){
+                    return;
+                }
+                animation = true;
+                wrap_index++;
+                console.log(wrap_index)
+                move(wrap_index);
+            });
+
+            function move(_idx){
+                $('.wrap').animate({
+                    'left' : wrap_index * width * -1
+                }, {
+                    duration : timer,
+                    complete : function(){
+                        animation = false;
+                    }
+                });
+                $('.dot2').removeClass('dot_color');
+                $('.dot2').eq(_idx).addClass('dot_color');
+            }
+            
+           
+                
 
 
 

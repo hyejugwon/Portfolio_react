@@ -1,0 +1,346 @@
+*{ font-family: 'Montserrat', 'Noto Sans KR', sans-serif; box-sizing: border-box;}
+
+.CartContainer{
+    max-width: 1500px;
+    margin: 0 auto;
+    padding-bottom: 750px;
+}
+.orderSequence{
+    display: flex;
+    justify-content: center;
+    max-width: 1500px;
+    margin: 0 50px;
+    padding: 20px 0 100px;
+}
+
+.orderSequence li{
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #d4d4d4;
+}
+
+.orderSequence .margin{
+    margin-right: 50px;
+    position: relative;
+}
+
+.orderSequence .margin::after{
+    position: absolute;
+    content: '>';
+    right: -28px;
+}
+
+.orderSequence li:first-child{
+    color: black;
+}
+
+.orderListsArea{
+    border-top: 4px solid black;
+    height: 170px;
+    margin: 0 50px;
+}
+
+.listSection{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 74px;
+    border-bottom: 1px solid #d4d4d4;
+}
+.listSection li{
+    font-size: 17px;
+    font-weight: 600;
+    color: black;
+    margin: 0;
+    text-align: center;
+}
+.productInfo{
+    min-width: 330px;
+    display: inline-block;
+    width: 53%;
+}
+.quantity{
+    min-width: 200px;
+}
+.listSection .price{
+    min-width: 200px;
+}
+.checkBox{
+    width: 5%;
+    display: flex;
+    justify-content: center;
+}
+.checkBox span{
+    width: 40px; height: 74px;
+    color: #d4d4d4;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+.shipping{
+    min-width: 175.47px;
+}
+.lists{
+    border-bottom: 1px solid;
+}
+.listform{
+    display: flex;
+    height: 171px;
+}
+.productInfoArea{
+    display: flex;
+    flex-grow: 1;
+    align-items: flex-start;
+    height: 171px;
+    position: relative;
+    border-right: 1px solid #d4d4d4;
+    padding: 27px 60px 30px 0; 
+}
+.productInfoArea img{
+    width: 110px; height: 110px;
+    margin: 3px 25px 0 0;
+}
+.productInfos{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.productInfos .brand{
+    font-size: 12px;
+}
+.productInfos .name{
+    display: inline-block;
+    min-width: 132px;
+    font-size: 16px;
+    word-break: keep-all;
+    line-height: 20px;
+    height: auto;
+    margin-bottom: 10px;
+}
+.productInfos .price{
+    color: black;
+    font-size: 13px;
+    font-weight: 400;
+    margin-bottom: 0;
+}
+.productInfos .close{
+    width: 25px; height: 25px;
+    border: 1px solid #d4d4d4;
+    position: absolute;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    color: #d4d4d4;
+    right: 20px;
+}
+
+.checkBoxArea{
+    width: 5%;
+    display: flex;
+    justify-content: center;
+}
+.checkBoxArea span{
+    width: 40px; height: 171px;
+    color: #d4d4d4;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+.quantityBoxArea{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid #d4d4d4;
+    min-width: 200px; height: 171px;
+}
+.quantityBoxArea .quantityButton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #d4d4d4;
+    width: 36px; height: 36px;
+    border: 1px solid #d4d4d4;
+}
+
+.quantityBoxArea .button2{ 
+    margin-left: -1px; 
+    color: black; 
+    font-weight: 600;
+
+}
+.quantityBoxArea .button3{ margin-left: -1px;}
+
+
+.priceArea{ 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 200px;
+    border-right: 1px solid #d4d4d4;
+}
+.priceArea .buyNow{
+    width: 100px; height: 38px;
+    color: white; font-weight: 700;
+    margin-top: 18px;
+    font-size: 14px;
+    box-shadow: none;
+}
+.priceArea .buyNow:hover{
+    color: #ff4800;
+}
+.priceArea .finalPrice{
+    font-size: 22px; font-weight: 700;
+}
+.finalPrice span{
+    display: inline-block;
+    font-size: 18px; font-weight: 500;
+}
+
+.listform .shippingArea{ 
+    max-width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+    word-break: keep-all;
+}
+.shippingArea .shippingPrice{
+    font-size: 15px;
+    font-weight: 600;
+}
+.shippingArea .shippingDes{
+    font-size: 13px;
+    font-weight: 400;
+    text-align: center;
+}
+.shippingArea .shippingDes span{
+    display: inline-block;
+    color: #375fff;
+    margin-top: 15px;
+}
+
+
+
+.deleteArea{
+    max-width: 1500px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 100px;
+}
+.deleteBtns button{
+    width: 130px; height: 42px;
+    background-color: white;
+    border: 1px solid #a0a0a0;
+    font-size: 15px;
+}
+.deleteBtns button:hover{
+    border: 1px solid;
+}
+.deleteBtns button:first-child{
+    margin-right: 20px;
+}
+.deleteArea p{
+    font-size: 15px;
+}
+
+
+.totalPriceArea{
+    border-top: 4px solid black;
+}
+.totalPriceArea .priceMenu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 74px;
+    border-bottom: 1px solid #d4d4d4;
+}
+.priceMenu li{
+    width: calc(100% / 3);
+    font-size: 17px;
+    font-weight: 600;
+    color: black;
+    margin: 0;
+    text-align: center;
+}
+.totalPriceArea .prices{
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-bottom: 1px solid #d4d4d4;
+}
+.prices li{
+    width: calc((100% - 60px) / 3);
+}
+.prices .strong{
+    font-size: 32px;
+    font-weight: 700;
+}
+.prices p{
+    line-height: 30px;
+    width: 30px; height: 30px;
+    background-color: black;
+    color: white;
+    font-size: 24px;
+    border-radius: 40px;
+}
+.totalOrderArea .strong{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.strong span{
+    display: inline-block;
+    font-weight: 400;
+    font-size: 17px;
+}
+.prices .totalOrderArea{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+.totalOrderArea .totalNum{
+    font-size: 13px;
+    font-weight: 500;
+    position: absolute;
+    bottom: -30px;
+}
+
+
+.calculationBtns{
+    margin: 100px 0;
+    text-align: center;
+}
+.calculationBtns button{
+    width: 400px; 
+    height: 72px;
+    font-size: 26px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+}
+.calculationBtns button:hover{
+    color: #ff4800;
+}
+.calculationBtns button:first-child{
+    margin-right: 20px;
+}
+.calculationBtns .continue{
+    background-color: white;
+    color: #303033;
+    border: 1px solid #a0a0a0;
+}
+.calculationBtns .checkOut{
+    background-color: black;
+    color: white;
+}

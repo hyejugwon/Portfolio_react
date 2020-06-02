@@ -1,0 +1,143 @@
+*{ font-family: 'Montserrat', 'Noto Sans KR', sans-serif; box-sizing: border-box;}
+
+
+.mypageTitle{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+    height: 44px;
+    border-bottom: 4px solid;
+} 
+.mypageTitle h3{
+    font-size: 23px;
+    font-weight: 600;
+}
+.mypageTitle .english{
+    font-weight: 650;
+    font-size: 23.5px;
+}
+.mypageTitle a{
+    font-size: 14px;
+    color: #303030;
+}
+
+.myTable{
+    border-bottom: 1px solid;
+}
+.myTable ul{
+    display: flex;
+}
+.myTable ul li{
+    font-size: 14px;
+    color: #303030;
+    font-weight: 600;
+    text-align: center;
+    line-height: 50px;
+    height: 50px;
+    justify-content: center;
+}
+
+.orderDate{
+    width: 110px;
+}
+.orderItem{
+    width: calc(100% - 110px - 210px - 120px);
+    display: flex;
+    align-items: center;
+}
+.orderNum{
+    width: 210px;
+}
+.amount{
+    width: 120px;
+    text-align: right !important;
+    padding-right: 24px;
+}
+
+.recentOrderList .list{
+    border-bottom: 1px solid #d4d4d4;
+    height: 81px;
+    text-align: center;
+    align-items: center;
+    display: flex;
+}
+.list li{
+    font-size: 14px;
+    color: #303030;
+}
+.orderItem img{
+    width: 60px;
+    margin: 0 20px 0 0;
+}
+.list .orderItem .itemName{
+    text-align: left;
+}
+.list .orderNum{
+    font-weight: 800;
+}
+.list .amount{
+    font-weight: 500;
+}
+.list .amount span{
+    display: inline-block;
+    font-weight: 400;
+    font-size: 13px;
+}
+
+
+.mainCate{
+    margin-bottom: 120px;
+}
+
+
+
+.heartName{
+    font-size: 16px;
+    font-weight: 700;
+    margin: 28px 0 10px 0;
+    letter-spacing: -0.5px;
+}
+.heartProduct{
+    border-bottom: 1px solid #d4d4d4;
+}
+.productContainer{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -20px;
+}
+.productList{
+    display: flex;
+    flex-direction: column;
+    width: calc((100% - 100px) / 5);
+    margin-bottom: 60px;
+    margin-left: 20px;
+}
+.productList img{
+    width: 100%;
+    margin-bottom: 10px;
+}
+.productList span{
+    font-size: 12px;
+    color: #5d5d5d;
+    display: inline-block;
+    line-height: 15px;
+}
+
+
+.brandContainer{
+    display: flex;
+    margin-left: -20px;
+}
+.brandContainer .brandList{
+    margin-left: 20px;
+    width: calc((100% - 60px) / 3);
+}
+.brandList span{
+    font-size: 18px;
+    display: block;
+    font-weight: 500;
+}
+.brandList .brand_kr{
+    font-weight: 390;
+}

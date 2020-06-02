@@ -1,0 +1,21 @@
+.reviewTab{
+    display: flex;
+    width: 100%;
+    border-bottom: 4px solid;
+}
+.reviewTab li{
+    width: 182px;
+    height: 50px;
+    font-size: 14px;
+    color: #a0a0a0;
+    font-weight: 400;
+    text-align: center;
+    line-height: 50px;
+    border: 1px solid #a0a0a0;
+}
+.setReviewTab{
+    background-color: black;
+    color: white !important;
+    border: none !important;
+    line-height: 54px !important;
+}

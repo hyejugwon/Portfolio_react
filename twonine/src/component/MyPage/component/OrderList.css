@@ -1,0 +1,170 @@
+
+.myTable ul li{ display: flex; }
+.myTable ul .productInfo{ flex-grow: 1;  }
+.myTable ul .process{
+    display: inline-block;
+    text-align: left; 
+}
+
+@media screen and (min-width : 1240px){
+    .myTable ul .shipping{ min-width: 300px; }
+    .orderItemInfo .shippingFee { min-width: 300px; }
+    .myTable ul .process{ min-width:  330px; }
+    .orderItemInfo .process{ min-width: 330px; }
+}
+@media screen and (min-width : 1030px) and (max-width : 1239px){
+    .myTable ul .shipping{ min-width: 155px; }
+    .orderItemInfo .shippingFee { min-width: 155px; }
+    .myTable ul .process{ min-width:  260px; }
+    .orderItemInfo .process{ min-width: 260px; }
+}
+@media screen and (max-width : 1029px){
+    .myTable ul .shipping{ min-width: 134px; }
+    .orderItemInfo .shippingFee { min-width: 134px; }
+    .myTable ul .process{ min-width: 3 230px;} 
+    .orderItemInfo .process{ min-width: 230px; }
+}
+.orderLists{
+    border-bottom: 2px solid;
+}
+.orderLists .orderInfo{
+    height: 57px;
+    border-bottom: 1px solid #d4d4d4;
+    display: flex;
+    align-items: center;
+}
+.orderInfo .orderDate{
+    margin-right: 30px;
+    display: flex;
+    width: 150px;
+}
+.orderInfo .orderNum{
+    display: flex;
+    width: auto;
+}
+.orderInfo{
+    display: flex;
+}
+.order_kr{
+    font-size: 15px;
+    font-weight: 300;
+    margin-right: 5px;
+}
+.order_num{
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 2px;
+}
+
+
+
+
+.orderItemInfo{
+    padding: 30px 0;
+    display: flex;
+    align-items: center;
+}
+.itemInfos{
+    display: flex;
+    flex-grow: 1;
+}
+.itemInfos img{
+    width: 80px; height: 80px;
+    margin-right: 20px;
+}
+.brandInfos{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.brandInfos .brand{
+    font-size: 12px;
+    font-weight: 700;
+    text-decoration: none;
+}
+.brandInfos .name{
+    font-size: 16px;
+    line-height: 22px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+    height: auto;
+    color: #303030;
+}
+.brandInfos .options{
+    margin-bottom: 14px;
+}
+.brandInfos .options span{
+    font-size: 12px;
+    font-weight: 400;
+    border: none;
+    width: 100%;
+    padding: 0;
+    display: inline-block;
+}
+.brandInfos .priceConainer{
+    display: flex;
+    flex-direction: row;
+}
+.priceContainer{
+    display: flex;
+    align-items: center;
+}
+.priceContainer div{
+    color: black;
+    font-size: 13px;
+    font-weight: 400;
+}
+.priceContainer .price{
+    margin: 0;
+}
+.priceContainer .quantity {
+    margin-left: 4px;
+}
+.priceContainer .price .unit{
+    display: inline-block;
+    font-size: 12px;
+}
+
+
+.orderItemInfo .shippingFee{
+    font-size: 14px;
+    text-align: center;
+}
+.orderItemInfo .shippingFee .unit{
+    display: inline-block;
+}
+
+
+
+.orderItemInfo .process{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.orderItemInfo .process .processInfo span{
+    display: block;
+    font-size: 13px;
+    color: #5d5d5d;
+    margin-bottom: 5px;
+}
+.processInfo .textunderline{
+    text-decoration: underline;
+}
+.processInfo .blue{
+    color: #375fff !important;
+    font-weight: 500 !important;
+}
+.process .processInfo h3{
+    font-size: 23px;
+    margin-bottom: 4px;
+}
+.buttonArea{
+    width: 80px;
+}
+.buttonArea button{
+    width: 76px; height: 34px;
+    color: #5d5d5d;
+    border: 1px solid #d4d4d4;
+}

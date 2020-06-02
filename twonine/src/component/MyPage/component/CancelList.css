@@ -1,0 +1,59 @@
+.cancelTable{
+    display: flex;
+    align-items: center;
+}
+.cancelTable li:hover{
+    cursor: pointer;
+}
+.cancelTable li{
+    font-size: 14px;
+    font-weight: 200;
+    color: #5d5d5d;
+    margin: 0 20px;
+    text-transform: uppercase;
+    position: relative;
+}
+.cancelTable li::after{
+    position: absolute;
+    content: '';
+    width: 1px; height: 14px;
+    background-color: #d4d4d4;
+    top: 4px; right: -20px;
+}
+.cancelTable li:last-child{
+    margin-right: 0;
+}
+.cancelTable li:last-child:after{
+    content: none;
+}
+.cancelTabActive{
+    color: black !important;
+    font-weight: 600 !important;
+}
+
+.myTable ul .light{ font-weight: 400; }
+.cancelTableSet{ display: flex; text-align: center;}
+.myTable ul .orderNum:after{ content: none; }
+.myTable ul .orderTitle:after{ content: none; }
+.cancelTableSet li{ width: calc(100% / 3); }
+.myTable ul .orderTitle{ flex-grow: 1; }
+
+
+@media screen and (min-width : 1500px){
+    .cancelTableSet{ min-width: 430px; }
+    .classifi{ min-width: 140px; }
+    .myTable ul .orderNum { min-width: 260px;}
+}
+
+@media screen and (min-width : 1100px) and (max-width : 1500px){
+    .cancelTableSet{ min-width: 390px; }
+    .classifi{ min-width: 110px; }
+    .myTable ul .orderNum { min-width: 220px; }
+}
+
+
+@media screen and (max-width : 1100px){
+    .cancelTableSet{ min-width: 315px; }
+    .classifi{ min-width: 90px; }
+    .myTable ul .orderNum { min-width: 162px; }
+}

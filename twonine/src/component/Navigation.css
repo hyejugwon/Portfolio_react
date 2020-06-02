@@ -22,7 +22,7 @@ a, a:link, a:hover{ color: black; }
     height: 56px;
     background: black;
     color:  white;
-    font-family: 'Lato', 'Noto Sans KR', sans-serif; 
+    font-family: 'Montserrat', 'Noto Sans KR', sans-serif; 
     font-weight: bold;
     font-size: 14px;
     padding: 0 45px 0 50px;
@@ -108,7 +108,7 @@ header{
 .nav_bar_wrap_txt{
     display: flex;
 }
-.nav_bar_wrap_txt ul li{
+.nav_bar_wrap_txt ul{
     position: relative;
     display: flex;
     font-family: 'Montserrat', sans-serif;
@@ -117,13 +117,16 @@ header{
 .fixed .nav_bar_wrap_txt ul li{
     font-size: 32px;
 }
-.nav_bar_wrap_txt ul li:after{
-    content: '';
+.nav_bar_wrap_txt ul li{
+    position: relative;
+}
+.nav_bar_wrap_txt ul li::after{
     position: absolute;
+    content: '';
+    display: none;
     width: 100%; height: 6px;
     background-color: black;
     bottom: 6px;
-    display: none;
 }
 .nav_bar_wrap_txt ul li:hover:after{
     display: block;
@@ -151,6 +154,9 @@ header{
     display: flex;
     font-weight: bold;
     text-transform: uppercase;
+}
+.nav1 ul{
+    display: flex;
 }
 .nav1 ul li{
     margin-right: 20px;
@@ -180,7 +186,7 @@ header{
     display: block;
 }
 
-.nav2{
+.nav2 ul{
     display: flex;
 }
 .nav2 ul li{
@@ -224,14 +230,14 @@ header{
     margin-top: -5px;
 }
 .headerMenu ul{
-    margin-left: 20px;
+    display: flex;
+    font-size: 10px;
 }
 .headerMenu ul li{
     display: flex;
+    margin-left: 20px;
     align-items: baseline;
-    font-size: 10px;
 }
-
 .fixed .headerMenu ul li{
     font-size: 0;
 }
@@ -239,7 +245,9 @@ header{
     display: flex;
     align-items: center;
 }
-
+.headerMenuIcons .active{
+    margin: 0;
+}
 .wrap_icon{
     width: 17px; height: 17px;
     background-image: url('../home_img/sp_29cm.png');

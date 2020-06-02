@@ -1,0 +1,8 @@
+.CanWrite{
+    border-bottom: 1px solid #d4d4d4;
+}
+.CanWrite h4{
+    font-size: 16px; font-weight: 300;
+    height: 185px; line-height: 185px;
+    text-align: center;
+}
