@@ -8,18 +8,15 @@ const API = process.env.API;
 
 const ItemList = ({ history, category, midCategory }) => {
     const [ view, setView ] = useState([]);
-    const [ small, setSmall ] = useState([]);
-
-    useEffect(() => {
-        getItem();
-        getSmallCete();
-    }, [midCategory, category]);
+    const [ small, setSmall ] = useState(0);
+    const [ smalls, setSmalls ] = useState([]);
 
     const goDetail = id => {
         history.push(`/detail/${id}`);
     };
     
     const getItem = () => { 
+        setSmall(0);
         Axios.post(`${API}/TWgetItemsMid`, { big : category, mid : midCategory }). then(res => {
             const { data : { result, data, error } } = res;
             if(result) {
@@ -27,7 +24,7 @@ const ItemList = ({ history, category, midCategory }) => {
             } else {
                 alert('네트워크 오류가 발생했습니다.');
             }
-        })
+        });
      };
 
     
@@ -35,23 +32,30 @@ const ItemList = ({ history, category, midCategory }) => {
         Axios.post(`${API}/TWgetSmallCates`, { big : category, mid : midCategory }). then(res => {
             const { data : { result, data, error }} = res;
             if(result) {
-                setSmall(data);
+                setSmalls(data);
             } else {
                 alert('네트워크 오류');
             }
-        })
+        });
     };
 
-    const onClickSmall = (smallData) => {
-        // Axios.post(`$(API)/TWgetItemsSmall`, { small : smallCategory }). then( res => {
-        //     const { data : { result, data, error }} = res;
-                
-        // })
-        console.log(smallData);
-    }
-    // const getItems = () => {
-    //     Axios.post(`${API}/`)
-    // };
+    const onClickSmall = smallData => {
+        setSmall(smallData);
+        Axios.post(`${API}/TWgetItemsSmall`, { small : smallData }). then( res => {
+            const { data : { result, data, error }} = res;
+            if(result) {
+                setView(data);
+            } else {
+                alert('네트워크 오류');
+            }
+        });
+    };
+
+
+    useEffect(() => {
+        getItem(); // 상품 전체 불러오기
+        getSmallCete(); // 카테고리 리스트 불러오기
+    }, [midCategory, category]);
 
 
     return (
@@ -62,9 +66,9 @@ const ItemList = ({ history, category, midCategory }) => {
             <div className="ItemListsArea">
                 <div className="itemFilterArea">
                     <div className="itemFilter" >
-                        <li onClick={() => onClickSmall(getSmallCete)}>전체</li>
-                        {small.map(item => (
-                            <li onClick={() => onClickSmall(item.smallCode)}>{item.smallPath}</li>
+                        <li className={small === 0 ? 'active' : ''} onClick={getItem}>전체</li>
+                        {smalls.map(item => (
+                            <li className={small === item.smallCode ? 'active' : ''} onClick={() => onClickSmall(item.smallCode)}>{item.smallPath}</li>
                         ))}
                     </div>
                     <div className="filter_1">

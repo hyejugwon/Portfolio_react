@@ -12,6 +12,10 @@
     flex-grow: 1;
 }
 
+.active {
+    color: #141414;
+    font-weight: 600;
+}
 
 .itemFilterArea{
     height: 44px;

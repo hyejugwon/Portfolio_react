@@ -3,27 +3,15 @@ import { AiOutlineHeart } from "react-icons/ai";
 import { AiFillHeart } from "react-icons/ai";
 import { FiMessageSquare } from "react-icons/fi";
 import './ListViewArea.css';
-import Axios from 'axios';
+
+const nf = new Intl.NumberFormat();
+
 
 const ListViewArea = ({ category, sample: { id, img, sale, coupon, newP, soldOut, brand, name, price, rate, salePrice, check }, onClickHandler}) => {
    
-    // const getItems = () => {
-    //     Axios.get('http://fomalhaut.shop/api/SP_getItem').then(res => {
-    //         const { data : { result, data } } = res;
-    //         if (result) {
-    //             console.log(data);
-    //         } else {
-    //             alert('네트워크 오류 발생!');
-    //         }
-    //     });
-    // };
-
-    useEffect(() => {
-    }, [category]);
-
     // useEffect(() => {
-    //     getItems();
-    // });
+    // }, [category]);
+
     
     return(
         <div className="ListViewAreaAll" >
@@ -49,7 +37,7 @@ const ListViewArea = ({ category, sample: { id, img, sale, coupon, newP, soldOut
                 <div className="name">{name}</div>
                 <div className={ (sale) === false ? 'blackPrice' : '' }>
                     <div className="netPrice">
-                        <div className="price">{price}</div>
+                        <div className="price">{nf.format(price)}</div>
                         <div className="unit">원</div>
                     </div>
                 </div>
