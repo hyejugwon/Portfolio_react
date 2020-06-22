@@ -10,13 +10,12 @@ const Navigation = () => {
 		setTop(scrollTop);
 	};
 
-	// useEffect(() => {
-	// 	window.addEventListener('scroll', onScroll);
-
-	// 	return () => {
-	// 		window.removeEventListener('scroll');
-	// 	}
-	// }, []);
+	useEffect(() => {
+		window.addEventListener('scroll', onScroll);
+		// return () => {
+		// 	window.removeEventListener('scroll');
+		// }
+	}, []);
 
     return (
         <div className="naviContainer">

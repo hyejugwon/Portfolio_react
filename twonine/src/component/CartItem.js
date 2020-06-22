@@ -5,6 +5,7 @@ import { IoMdClose } from "react-icons/io";
 import { TiMinus } from "react-icons/ti";
 import { TiPlus } from "react-icons/ti";
 import './CartItem.css';
+const nf = new Intl.NumberFormat();
 
 const CartItem = ({ sample, index }) => {
     const { state, dispatch } = useContext(AppContext);
@@ -42,11 +43,23 @@ const CartItem = ({ sample, index }) => {
                 </span>
             </div>
             <div className="productInfoArea">
-                <img src="//img.29cm.co.kr/next-product/2019/10/30/95cd75137123472d8e2cd7bb9dd7ab4c_20191030114350.jpg?width=150"/>
+                <img src={sample.img}/>
                 <div className="productInfos">
                     <li className="brand">{sample.brand}</li>
                     <li className="name">{sample.name}</li>
-                    <li className="price">{sample.price}원</li>
+                    <>
+                        {sample.s_percent > 0 ? (
+                            <div>
+                                <li className="price">{nf.format(sample.price)}원</li>
+                                <li className="price">{sample.s_percent}% {nf.format(sample.s_price)}원</li>
+                            </div>
+                        ) : (
+                            <div>
+                                <li className="price">{nf.format(sample.price)}원</li>
+                            </div>
+                        )}
+                    </>
+                    <li className="option">옵션 : [SIZE]{sample.size}, [COLOR]{sample.color} </li>
                     <button className="close" onClick={remove}>
                         <IoMdClose size="25"/>
                     </button>
@@ -64,7 +77,7 @@ const CartItem = ({ sample, index }) => {
                 </button>
             </div>
             <div className="priceArea">
-                <div className="finalPrice">{sample.price * sample.count}<span>원</span></div>
+                <div className="finalPrice">{nf.format(sample.price * sample.count)}<span>원</span></div>
                 <button className="buyNow">BUY NOW</button>
             </div>
             <div className="shippingArea">

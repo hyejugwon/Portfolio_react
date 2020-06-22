@@ -1,7 +1,6 @@
 .ListViewAreaAll{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     text-align: left;
     margin: 20px 0 50px 20px;
 }
@@ -91,32 +90,13 @@
 .sampleBox .name{
     color: #5d5d5d;
     font-size: 12px;
-    font-weight: 400;
+    font-weight: 450;
     margin-bottom: 16px;
     height: auto;
 }
-.sampleBox .price{
-    font-size: 12px;
-    color: #d4d4d4;
-    font-weight: 400;
-    margin-bottom: 0;
-}
-.blackPrice .price{
-    font-size: 14px;
-    color: black;
-    font-weight: 600;
-}
-.unit{
-    display: none;
-}
-.blackPrice .unit{
-    display: block;
-    font-size: 12px;
-    color: black;
-    margin-top: 1px;
-}
 .saleBox{
     display: flex;
+    align-items: center;
     font-size: 14px;
     color: #ff4800;
     font-weight: 700;
@@ -124,22 +104,25 @@
 .rate{
     margin-right: 10px;
 }
-.redPrice .saleBox .unit{
-    display: block;
-    font-size: 12px;
-    color: #ff4800;
+
+.listPriceArea .price{
     font-weight: 400;
-    margin-top: 1px;
+    font-size: 12px;
+    color: #d4d4d4;
+    margin-bottom: 0px !important;
 }
-.saleBox .unit{
-    display : none;
+.listPriceArea .thisPrice{
+    font-weight: 580;
+    font-size: 14px;
+    margin-bottom: 10px;
 }
+.redPrice{ color: #ff4800; }
+
 
 
 .ListViewAreaAll .userSelec{
     display: flex;
     justify-content: center;
-    margin-top: 10px;
     justify-content: left;
     color: #5d5d5d;
 }
@@ -151,7 +134,7 @@
     display: flex;
 }
 .ListViewAreaAll .userSelec .count {
-    font-size: 13px;
+    font-size: 11px;
     margin-top: 3px;
 }
 

@@ -7,12 +7,11 @@ import './ListViewArea.css';
 const nf = new Intl.NumberFormat();
 
 
-const ListViewArea = ({ category, sample: { id, img, sale, coupon, newP, soldOut, brand, name, price, rate, salePrice, check }, onClickHandler}) => {
+const ListViewArea = ({ category, sample: { id, img, sale, coupon, news, soldOut, brand, name, price, s_percent, s_price, check }, onClickHandler}) => {
    
     // useEffect(() => {
     // }, [category]);
 
-    
     return(
         <div className="ListViewAreaAll" >
             <div className="sampleBox" onClick={() => onClickHandler(id)}>
@@ -25,7 +24,7 @@ const ListViewArea = ({ category, sample: { id, img, sale, coupon, newP, soldOut
                         <span className={ (coupon) === true ? 'show' : '' }>
                             <div className="bestCoupon">C</div>
                         </span>
-                        <span className={ (newP) === true ? 'show' : '' }>
+                        <span className={ (news) === true ? 'show' : '' }>
                             <div className="new">N</div>
                         </span>
                         <span className={ (soldOut) === true ? 'show' : '' }>
@@ -35,19 +34,18 @@ const ListViewArea = ({ category, sample: { id, img, sale, coupon, newP, soldOut
                 </div>
                 <div className="brand">{brand}</div>
                 <div className="name">{name}</div>
-                <div className={ (sale) === false ? 'blackPrice' : '' }>
-                    <div className="netPrice">
-                        <div className="price">{nf.format(price)}</div>
-                        <div className="unit">원</div>
-                    </div>
-                </div>
-                <div className={ (sale) === true ? 'redPrice' : '' }>
-                    <div className="saleBox">
-                        <div className="rate">{rate}</div>
-                        <div className="salePrice">{salePrice}</div>
-                        <div className="unit">원</div>
-                    </div>
-                </div>
+                 <>
+                    {s_percent > 0 ? (
+                        <div className="listPriceArea">
+                            <li className="price">{nf.format(price)}</li>
+                            <li className="thisPrice redPrice">{s_percent}% {nf.format(s_price)}원</li>
+                        </div>
+                    ) : (
+                        <div className="listPriceArea">
+                            <li className="thisPrice">{nf.format(price)}원</li>
+                        </div>
+                    )}
+                </>
             </div>
             <div className="userSelec">
                 <div className="heart">
@@ -61,11 +59,11 @@ const ListViewArea = ({ category, sample: { id, img, sale, coupon, newP, soldOut
                             <AiFillHeart size="18"/>
                         </span>
                     </div>
-                    <div className="count">00</div>
+                    <div className="count">{nf.format(3434)}</div>
                 </div>
                 <div className="review">
                     <FiMessageSquare size="18"/>
-                    <div className="count">00</div>
+                    <div className="count">{nf.format(123)}</div>
                 </div>
             </div>
         </div>

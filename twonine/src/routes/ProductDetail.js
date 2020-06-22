@@ -1,31 +1,38 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import Navigation from '../component/Navigation';
 import './ProductDetail.css';
 import { BsHeart } from "react-icons/bs";
 import { AiFillStar } from "react-icons/ai";
 import { AiOutlineStar } from "react-icons/ai";
 import AppContext from '../Contexts/AppContext';
-import SizeFilter from '../component/Shop/SizeFilter';
-import ColorFilter from '../component/Shop/ColorFilter';
-import SetFilter from '../component/Shop/SetFilter';
+import Dropdown from 'react-dropdown';
 import Axios from 'axios';
+const API = process.env.API;
+const nf = new Intl.NumberFormat();
+
+const sizeOptions = ['SIZE', 'XXS', 'XS', 'S', 'M', 'L', 'XL', 'XXL'];
+const colorOptions = ['COLOR', 'White', 'Red', 'Peach', 'Blue', 'Yellow', 'Gray', 'Black'];
 
 const ProductDetail = ({ match: {params: { id } } }) => {
     const { state, dispatch } = useContext(AppContext);
+    const [ item, setItem ] = useState([]);
+    const [ color, setColor ] = useState("");
+    const [ size, setSize ] = useState("");
 
-    const item = {
-        id: Number(id), 
-        name: `상품${id}`,
-        price: 2000,
-        size: 'M',
-        color: 'white',
-    };
+    // const item = {
+    //     id: Number(id), 
+    //     name: `상품${id}`,
+    //     price: 2000,
+    //     size: 'M',
+    //     color: 'white',
+    // };
 
     const getItems = () => {
-        Axios.post('http://fomalhaut.shop/api/SP_detailitem', { id: 3 }).then(res => {
+        Axios.post(`${API}/TWgetDetail`, { id : Number(id) }).then(res => {
             const { data: { result, data } } = res;
             if (result) {
-                console.log(data[0]);
+                setItem(data);
+                console.log(data);
             } else {
                 alert('네트워크 오류 발생!');
             }
@@ -33,12 +40,25 @@ const ProductDetail = ({ match: {params: { id } } }) => {
     };
     
 	const onCart = () => {
-		dispatch({ type: 'ADD_CART', data: item});
-	};
+        if (color === '' || size === '' || color === 'COLOR' || size === 'SIZE') {
+            alert('옵션 션택');
+            return;
+        } 
+		dispatch({ type: 'ADD_CART', data: {...item, color, size, price: item.s_price > 0 ? item.s_price : item.price }});
+    };
+    
+    const onChangeSize = ev => {
+        const { value } = ev;
+        setSize(value);
+    }
+    const onChangeColor = ev => {
+        const { value } = ev;
+        setColor(value);
+    }
 
     useEffect(() => {
         getItems();
-    });
+    }, []);
 
     return (
         <div className="productDetailContainer">
@@ -58,11 +78,11 @@ const ProductDetail = ({ match: {params: { id } } }) => {
                     </div>
                 </div>
                 <div className="productImportantArea">
-                    <img src="http://img.29cm.co.kr/next-product/2020/03/05/a16e2a4490d947a6b98e15b8a621a15d_20200305150404.jpg"/>
+                    <img src={item.img}/>
                     <div className="importantInfo">
                         <div className="infoTop">
                             <div className="namePrice">
-                                <div className="productName">상품이름</div>
+                                <div className="productName">{item.name}</div>
                                 <div className="reviewArea">
                                     <ul>
                                         <AiFillStar size="12"/>
@@ -73,8 +93,18 @@ const ProductDetail = ({ match: {params: { id } } }) => {
                                     </ul>
                                     <div className="goReview">1,181 리뷰 보기</div>
                                 </div>
-                                <div className="productPrice">71,000</div>
-                                <div className="productSalePrice red">60% 28,700원</div>
+                                <>
+                                    {item.s_percent > 0 ? (
+                                        <div className="detailPrice">
+                                            <li className="price">{nf.format(item.price)}</li>
+                                            <li className="thisPrice redPrice">{item.s_percent}% {nf.format(item.s_price)}원</li>
+                                        </div>
+                                    ) : (
+                                        <div className="detailPrice">
+                                            <li className="thisPrice">{nf.format(item.price)}원</li>
+                                        </div>
+                                    )}
+                                </>
                             </div>
                             <div className="userHeartArea">
                                 <div className="heart">
@@ -102,13 +132,10 @@ const ProductDetail = ({ match: {params: { id } } }) => {
                         </div>
                         <div className="options">
                             <li>
-                                <SizeFilter/>
+                                <Dropdown value={size} options={sizeOptions}  placeholder="SIZE" onChange={onChangeSize}/>
                             </li>
                             <li>
-                                <ColorFilter/>
-                            </li>
-                            <li>
-                                <SetFilter/>
+                                <Dropdown value={color} options={colorOptions}  placeholder="COLOR" onChange={onChangeColor}/>
                             </li>
                         </div>
                         <div className="buyArea">

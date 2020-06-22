@@ -5,7 +5,7 @@ import RIGHTBOX from '../component/Shop/jsons/rightBox.json';
 import LEFTBOX from '../component/Shop/jsons/leftBox.json';
 
 const Main = () => {
-    console.log(LEFTIMAGE)
+    // console.log(LEFTIMAGE)
     const [ view, setView ] = useState([ LEFTIMAGE ]);
     const [ view3, setView3 ] = useState([ RIGHTBOX ]);
     const [ view2, setView2 ] = useState([ LEFTBOX ]);

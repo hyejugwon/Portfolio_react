@@ -1,8 +1,10 @@
 .filter_1{
-    width: 134px; height: 46px;
-    border: 1px solid #d4d4d4;
+    height: 44px;
+    line-height: 44px;
+    width: 134px;
+    flex-shrink: 0;
     margin-left: -1px;
-    padding: 13px 15px 0; 
+    padding: 0 15px; 
     position: relative;
 }
 .filter_1::after{
@@ -23,12 +25,12 @@
     font-size: 13px;
     color: #686868;
     z-index: 500;
-    width: 134px;
-    top: 44px; left: -1px;
+    width: 135px;
+    top: 44px; left: 0px;
     background-color: white;
     border: 1px solid #d4d4d4;
-    padding: 10px 0;
+    padding: 8px 0;
 }
 .Dropdown-option{
-    padding: 10px 15px;
+    padding: 0px 15px;
 }

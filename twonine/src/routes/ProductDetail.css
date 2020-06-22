@@ -125,10 +125,14 @@
 .productName{
     margin-bottom: 20px;
 }
-.productPrice{
+.detailPrice .price{
     color: #a0a0a0;
     text-decoration: line-through;
     font-size: 14px; font-weight: 600;
+    margin-bottom: 0;
+}
+.redPrice{
+    color: #ff4800;
 }
 .red{
     color: #ff4800;
@@ -206,7 +210,7 @@
     margin-bottom: 5px;
 }
 .benefit ul li{
-    font-weight: 300;
+    font-weight: 350;
 }
 .benefit ul .free{
     margin-top: 10px;
@@ -237,6 +241,19 @@
     background-repeat: no-repeat;
     background-size: cover;
     top: 4px; right: 5px;
+}
+
+.options li .Dropdown-menu {
+    width: calc(100% + 2px);
+    position: absolute;
+    top: 34px; left: -1px;
+}
+.options li .Dropdown-option{
+    padding: 0 20px;
+}
+.options li .Dropdown-option:hover{
+    cursor: pointer;
+    background: #d4d4d4;
 }
 
 

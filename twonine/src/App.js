@@ -27,21 +27,6 @@ const initialState = {
 };
 
 const App = () => {
-    // const [top, setTop] = useState(0);
-
-    // const onScroll = ev => {
-	// 	const { srcElement: { scrollingElement: { scrollTop } } } = ev;
-	// 	setTop(scrollTop);
-	// };
-
-	// useEffect(() => {
-	// 	window.addEventListener('scroll', onScroll);
-
-	// 	return () => {
-	// 		window.removeEventListener('scroll');
-	// 	}
-	// }, []);
-
     const [state, dispatch] = useReducer(CartReducer, initialState);
     
     return (

@@ -66,9 +66,9 @@ const ItemList = ({ history, category, midCategory }) => {
             <div className="ItemListsArea">
                 <div className="itemFilterArea">
                     <div className="itemFilter" >
-                        <li className={small === 0 ? 'active' : ''} onClick={getItem}>전체</li>
+                        <li className={small === 0 ? 'smallActive' : ''} onClick={getItem}>전체</li>
                         {smalls.map(item => (
-                            <li className={small === item.smallCode ? 'active' : ''} onClick={() => onClickSmall(item.smallCode)}>{item.smallPath}</li>
+                            <li className={small === item.smallCode ? 'smallActive' : ''} onClick={() => onClickSmall(item.smallCode)}>{item.smallPath}</li>
                         ))}
                     </div>
                     <div className="filter_1">

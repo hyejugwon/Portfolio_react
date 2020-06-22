@@ -5,13 +5,15 @@ import { IoIosCheckboxOutline } from "react-icons/io";
 import CartItem from '../component/CartItem';
 import AppContext from '../Contexts/AppContext';
 
+const nf = new Intl.NumberFormat();
+const DELIVERY = 2500;
+
+
 const Cart = ({ sample }) => {
     const { state, dispatch } = useContext(AppContext);
 	const [totalAmount, setTotalAmount] = useState(0);
     const [count, setCount] = useState(0);
-
-    const nf = new Intl.NumberFormat();
-    const DELIVERY = 2500;
+    // delivery 라는 usestate 값을 만들고 useEffect로 totalAmount를 감시 totalAmount > 50000 일 경우 setDelivery = 0 
 
     const removeCheck = () => {
         dispatch({ type: 'REMOVE_CHECK', data: { id: sample.id } });

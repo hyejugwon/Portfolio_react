@@ -32,7 +32,7 @@ const ShopNavi = ({ category }) => {
                 <div className="shopList">
                     <ul>
                         {mid.map(item => (
-                            <li><NavLink className="engBtn" to={`/shop/${item.bigPath}/${item.midPath}`}>{item.midLabel}({item.midCode})</NavLink></li>
+                            <li><NavLink className="engBtn" to={`/shop/${item.bigPath}/${item.midPath}`}>{item.midLabel}</NavLink></li>
                         ))}
                     </ul>
                 </div>
