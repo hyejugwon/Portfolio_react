@@ -1,0 +1,33 @@
+.Special{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 50px;
+}
+.specialArea{
+    width: calc((100% - 20px) / 2);
+    max-height: 700px;
+    margin-bottom: 60px;
+}
+
+.specialArea .title{
+    font-size: 26px;
+    font-weight: bold;
+    word-break: keep-all;
+    margin-bottom: 10px;
+}
+.specialArea .sub{
+    font-size: 15px;
+    font-weight: 350;
+    margin-bottom: 50px;
+}
+.specialArea .line{
+    width: 100%; height: 3px;
+    background-color: #d4d4d4;
+    margin-bottom: 12px;
+}
+.specialArea .date{
+    font-size: 18px;
+    font-weight: bold;
+    font-style: italic;
+}

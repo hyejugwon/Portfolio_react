@@ -1,0 +1,100 @@
+.Event{
+    padding: 0 50px 4px 48px;
+}
+.eventTop{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 60px;
+}
+.eventing{
+    width: calc((100% - 20px) / 2);
+    height: 375px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+.eventing:first-child{
+    background-image: url('http://img.29cm.co.kr/next-contents/2020/06/11/529526054e324a62a17e4b02d217edfc_20200611170059.jpg');
+}
+.eventing:after{
+    position: absolute;
+    font-size: 18px;
+    font-weight: 700;
+    font-style: italic;
+    color: white;
+    bottom: 40px; left: 40px;
+}
+.eventing:first-child::after{
+    content: "2020.06.12 ~ 06.22"
+}
+.eventing:last-child{
+    background-image: url('http://img.29cm.co.kr/next-contents/2020/06/11/41f406e48bb2455394088d364a16858e_20200611173243.jpg');
+}
+.eventing:last-child:before{
+    position: absolute;
+    content: "D-2";
+    font-size: 18px;
+    font-weight: 700;
+    font-style: italic;
+    color: #ff4800;
+    bottom: 40px; left: 40px;
+}
+.eventing:last-child::after{
+    left: 90px;
+    content: "2020.06.12 ~ 06.14"
+}
+
+.eventFilter ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.eventFilter ul li{
+    font-size: 14px;
+    font-weight: 250;
+    color: #5d5d5d;
+    margin: 0 25px;
+    margin-bottom: 20px;
+    position: relative;
+}
+.eventFilter ul li::after{
+    position: absolute;
+    content: '';
+    width: 1px; height: 14px;
+    background-color: #d4d4d4;
+    top: 3px; right: -25px;
+}
+.eventFilter ul li:last-child:after{
+    content: none;
+}
+
+
+.eventList{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.eventList .list{
+    width: calc((100% - 60px) / 4);
+    margin-bottom: 100px;
+}
+
+.eventList .list img{
+    margin-bottom: 10px;
+}
+.eventTitle{
+    font-size: 26px;
+    font-weight: 500;
+    line-height: 34px;
+    letter-spacing: -0.5px;
+    word-break: keep-all;
+    margin-bottom: 12px;
+}
+.eventDate{
+    font-size: 18px;
+    font-style: italic;
+    font-weight: 740;
+}

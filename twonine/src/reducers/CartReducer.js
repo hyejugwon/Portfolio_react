@@ -19,10 +19,22 @@ const CartReducer = (state, {type, data}) => {
             return { ... state };
         }
         
+        case 'REMOVE_CHECK': {
+            const after = state.cart.filter(sample => !sample.check);
+            state.cart = after;
+            return { ...state };
+        }
+
+        case 'REMOVE_ITEM' : {
+            const after = state.cart.filter(item => item.id !== data.id);
+            state.cart = after;
+            return { ...state }; 
+        }
+        
         case 'SET_COUNT': {
-            const after = state.cart.map(sample => {
+            const after = state.cart.map(sample => 
                 sample.id === data.id ? ({ ...sample, count: data.count }) : sample
-            });
+            );
             state.cart = after;
             return { ... state };
         }

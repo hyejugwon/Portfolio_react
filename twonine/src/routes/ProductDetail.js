@@ -1,20 +1,45 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import Navigation from '../component/Navigation';
 import './ProductDetail.css';
 import { BsHeart } from "react-icons/bs";
 import { AiFillStar } from "react-icons/ai";
 import { AiOutlineStar } from "react-icons/ai";
 import AppContext from '../Contexts/AppContext';
+import SizeFilter from '../component/Shop/SizeFilter';
+import ColorFilter from '../component/Shop/ColorFilter';
+import SetFilter from '../component/Shop/SetFilter';
+import Axios from 'axios';
 
 const ProductDetail = ({ match: {params: { id } } }) => {
     const { state, dispatch } = useContext(AppContext);
-	
-	const onCart = sample => {
-		dispatch({ type: 'ADD_CART', data: sample});
+
+    const item = {
+        id: Number(id), 
+        name: `상품${id}`,
+        price: 2000,
+        size: 'M',
+        color: 'white',
+    };
+
+    const getItems = () => {
+        Axios.post('http://fomalhaut.shop/api/SP_detailitem', { id: 3 }).then(res => {
+            const { data: { result, data } } = res;
+            if (result) {
+                console.log(data[0]);
+            } else {
+                alert('네트워크 오류 발생!');
+            }
+        });
+    };
+    
+	const onCart = () => {
+		dispatch({ type: 'ADD_CART', data: item});
 	};
 
+    useEffect(() => {
+        getItems();
+    });
 
-    
     return (
         <div className="productDetailContainer">
             <Navigation/>
@@ -76,12 +101,18 @@ const ProductDetail = ({ match: {params: { id } } }) => {
                             </div>
                         </div>
                         <div className="options">
-                            <li>size</li>
-                            <li>color</li>
-                            <li>구성</li>
+                            <li>
+                                <SizeFilter/>
+                            </li>
+                            <li>
+                                <ColorFilter/>
+                            </li>
+                            <li>
+                                <SetFilter/>
+                            </li>
                         </div>
                         <div className="buyArea">
-                            <button className="buyBtn shoppingBag" onClick={() => onCart(sample)}>Shopping Bag</button>
+                            <button className="buyBtn shoppingBag" onClick={onCart}>Shopping Bag</button>
                             <button className="buyBtn buyNow">Buy Now</button>
                         </div>
                         <div className="moreBenefit">전고객 <span className="red">10%</span> 할인 그리고 다양한 추가 할인 혜택들</div>

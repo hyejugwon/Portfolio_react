@@ -56,16 +56,16 @@ const App = () => {
                             <Route path="/mypage/:myMid" component={Mypage}/>
                             <Route path="/order/cart" component={Cart}/>
                             <Route path="/member/login" component={Login}/>
-                            <Route path="/special-order/main" component={Specialorder}/>
-                            <Route path="/showcase/main" component={Showcase}/>
-                            <Route path="/media/main" component={Media}/>
+                            <Route path="/special-order/:id" component={Specialorder}/>
+                            <Route path="/showcase/:id" component={Showcase}/>
+                            <Route path="/media/:id" component={Media}/>
                             <Route path="/pt/main" component={Pthistory}/>
-                            <Route path="/welove/main" component={Welove}/>
+                            <Route path="/welove/:id" component={Welove}/>
                             <Route path="/shop/:category/:midCategory" component={ShopCate}/>
-                            <Route path="/best/main" component={Best}/>
-                            <Route path="/event/main" component={Event}/>
-                            <Route path="/brand/main" component={Brand}/>
-                            <Route path="/lookbook/main" component={Lookbook}/>
+                            <Route path="/best/:id" component={Best}/>
+                            <Route path="/event/:id" component={Event}/>
+                            <Route path="/brand/:id" component={Brand}/>
+                            <Route path="/lookbook/:id" component={Lookbook}/>
                             <Route path="/detail/:id" component={ProductDetail}/>
                         </Switch>
                     </div>

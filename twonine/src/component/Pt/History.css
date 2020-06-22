@@ -1,0 +1,9 @@
+.History{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 30px;
+    justify-content: space-between;
+}
+.History img{
+    width: calc((100% - 20px) / 2);
+}

@@ -1,22 +1,43 @@
-import React, { useContext } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import AppContext from '../Contexts/AppContext';
 import { IoIosCheckboxOutline } from "react-icons/io";
 import { IoMdClose } from "react-icons/io";
 import { TiMinus } from "react-icons/ti";
 import { TiPlus } from "react-icons/ti";
+import './CartItem.css';
 
-const CartItem = ({ sample }) => {
+const CartItem = ({ sample, index }) => {
     const { state, dispatch } = useContext(AppContext);
+    const [ list, setList ] = useState([]);
+    
+    const onCheck = idx => {
+        const after = state.cart.map((sample, index) => 
+            idx === index ? ({ ...sample, check: !sample.check }) : sample
+        );
+        setList(after);
+    }
 
-    const onChangeCount = ev => {
-        const { target: { value } }= ev;
-        dispatch({ type: 'SET_COUNT', data: {...sample, count: Number(value)}});
+    const remove = () => {
+        dispatch({ type: 'REMOVE_ITEM', data: { id: sample.id } });
     };
 
+    const plus = () => {
+        dispatch({ type: 'SET_COUNT', data: {...sample, count: sample.count + 1}});
+    };
+    
+    const minus = () => {
+        if (sample.count === 1) {
+            return;
+        }
+        dispatch({ type: 'SET_COUNT', data: {...sample, count: sample.count - 1}});
+    };
+
+    
+    
     return(
         <div className="listform" key={`CARTITEM${sample.id}`}>
             <div className="checkBoxArea">
-                <span>
+                <span className={ sample.check ? 'checkActive' : '' } onClick={() => onCheck(index)}>
                     <IoIosCheckboxOutline size="30"/>
                 </span>
             </div>
@@ -26,27 +47,24 @@ const CartItem = ({ sample }) => {
                     <li className="brand">{sample.brand}</li>
                     <li className="name">{sample.name}</li>
                     <li className="price">{sample.price}원</li>
-                    <div className="close">
+                    <button className="close" onClick={remove}>
                         <IoMdClose size="25"/>
-                    </div>
+                    </button>
                 </div>
             </div>
             <div className="quantityBoxArea">
-                <div className="quantityButton button1">
+                <button className="quantityButton button1" onClick={minus}>
                     <TiMinus size="16"/>
+                </button>
+                <div className="quantityButton button2">
+                    {sample.count}
                 </div>
-                <select className="quantityButton button2">
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                </select>
-                <div className="quantityButton button3">
+                <button className="quantityButton button3" onClick={plus}>
                     <TiPlus size="20"/>
-                </div>
+                </button>
             </div>
             <div className="priceArea">
-                <div className="finalPrice">{sample.price}<span>원</span></div>
+                <div className="finalPrice">{sample.price * sample.count}<span>원</span></div>
                 <button className="buyNow">BUY NOW</button>
             </div>
             <div className="shippingArea">

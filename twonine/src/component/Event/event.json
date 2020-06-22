@@ -1,0 +1,84 @@
+[
+    {
+        "id" : 1, 
+        "src" : "http://img.29cm.co.kr/next-edition/2020/06/11/1d9bf317579c430eb804835a28a3d4b4_20200611151816.jpg?width=500",
+        "title" : "제주의 내일을 담은 새로운 주름 플리츠마마",
+        "date" : "2020.06.12 ~ 06.25",
+        "type" : 2
+    },
+    {
+        "id" : 2, 
+        "src" : "http://img.29cm.co.kr/next-edition/2020/06/10/3eaf1f696a6f446292038d52b4598c36_20200610101136.jpg?width=500",
+        "title" : "오소이가 풀어낸 메탈소재의 청량감과 자연스러운 곡선",
+        "date" : "2020.06.12 ~ 06.18",
+        "type" : 2
+    },
+    {
+        "id" : 3, 
+        "src" : "http://img.29cm.co.kr/next-edition/2020/06/09/7b34be8698fe448181d64f8484531e70_20200609170723.jpg?width=500",
+        "title" : "유어블루스와 떠나는 랜선여행",
+        "type" : 7
+    },
+    {
+        "id" : 4, 
+        "src" : "http://img.29cm.co.kr/next-edition/2020/06/09/d344aa51523a4b2ab929b78c52ab1e30_20200609151201.jpg?width=500",
+        "title" : "[로마네] 바쁜 일상 속 소소한 즐거움 ~53%",
+        "date" : "2020.06.09 ~ 06.22",
+        "type" : 6
+    },
+    {
+        "id" : 5, 
+        "src" : "http://img.29cm.co.kr/next-edition/2020/06/08/d51e392c504649f9875aafb424018de8_20200608115704.jpg?width=500",
+        "title" : "[써보니 어때요?] 친환경 뷰티",
+        "date" : "2020.06.09 ~ 07.07",
+        "type" : 5
+    },
+    {
+        "id" : 6, 
+        "src" : "http://img.29cm.co.kr/next-edition/2020/06/08/37ad1bd916c6492388df3a3c00fa5b33_20200608102327.jpg?width=500",
+        "title" : "함께 하면 즐거움이 두 배",
+        "type" : 3
+    },
+    {
+        "id" : 7, 
+        "src" : "http://img.29cm.co.kr/next-edition/2020/06/05/e800f593f69546299b9ee54d0eceb28a_20200605095716.jpg?width=500",
+        "title" : "벤시몽 데일리 여름 컬렉션 선공개",
+        "date" : "2020.06.08 ~ 06.22",
+        "type" : 1
+    },
+    {
+        "id" : 8, 
+        "src" : "http://img.29cm.co.kr/next-edition/2020/06/03/8c3fa0746cd049d6baa3c61747dff2d3_20200603173133.jpg?width=500",
+        "title" : "[써보니 어때요?] JMW MS8002B",
+        "date" : "2020.06.08 ~ 07.24",
+        "type" : 6
+    },
+    {
+        "id" : 9, 
+        "src" : "http://img.29cm.co.kr/next-edition/2020/05/18/0b0ef73283dd460ca71c55ae86956fdc_20200518112456.jpg?width=500",
+        "title" : "#패턴별 여름 이불",
+        "date" : "2020.06.04 ~ 06.17",
+        "type" : 4
+    },
+    {
+        "id" : 10, 
+        "src" : "http://img.29cm.co.kr/next-edition/2020/06/01/3dc146e8718447f6b3091f60096d8f4d_20200601150029.png?width=500",
+        "title" : "2주에 한 번, 신선한 제철 꽃 정기구독 서비스",
+        "date" : "2020.06.01 ~ 06.13",
+        "type" : 4
+    },
+    {
+        "id" : 11, 
+        "src" : "http://img.29cm.co.kr/next-edition/2020/05/29/2b535733368340b5aae0e65b8060a5f5_20200529112156.jpg?width=500",
+        "title" : "[닥터제이콥스] 29CM 온오프라인 팝업 30%",
+        "date" : "2020.06.01 ~ 06.30",
+        "type" : 5
+    },
+    {
+        "id" : 12, 
+        "src" : "http://img.29cm.co.kr/next-edition/2020/05/28/2c6012b8195844a9bc0a18397065208b_20200528162656.jpg?width=500",
+        "title" : "더 풍요로운 일상 모그 스튜디오 29CM 단독 ~40%",
+        "date" : "2020.06.01 ~ 06.15",
+        "type" : 6
+    }
+]

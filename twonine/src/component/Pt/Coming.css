@@ -1,0 +1,10 @@
+.Coming{
+    margin: 0 30px;
+}
+.comingImage{
+    height: 750px;
+    background-image: url('//img.29cm.co.kr/next-edition/2020/06/10/9ceb8e8038d94acdbd714c320c593282_20200610171846.jpg?width=1200');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}

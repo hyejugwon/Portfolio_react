@@ -3,11 +3,27 @@ import { AiOutlineHeart } from "react-icons/ai";
 import { AiFillHeart } from "react-icons/ai";
 import { FiMessageSquare } from "react-icons/fi";
 import './ListViewArea.css';
+import Axios from 'axios';
 
 const ListViewArea = ({ category, sample: { id, src, sale, coupon, newP, soldOut, brand, name, price, rate, salePrice, check }, onClickHandler}) => {
    
+    const getItems = () => {
+        Axios.get('http://fomalhaut.shop/api/SP_getItem').then(res => {
+            const { data : { result, data } } = res;
+            if (result) {
+                console.log(data);
+            } else {
+                alert('네트워크 오류 발생!');
+            }
+        });
+    };
+
     useEffect(() => {
     }, [category]);
+
+    useEffect(() => {
+        getItems();
+    });
     
     return(
         <div className="ListViewAreaAll" >

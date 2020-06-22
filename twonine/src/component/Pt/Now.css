@@ -1,0 +1,13 @@
+.nowImage{
+    height: 750px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.img1{
+    background-image: url('//img.29cm.co.kr/next-edition/2020/05/13/63acd31f97b545f497a5b76db94a55a8_20200513115600.jpg?width=1200');
+}
+.img2{
+    background-image: url('//img.29cm.co.kr/next-edition/2020/05/06/59b12b52427445dbb1639828bd6de114_20200506122219.jpg?width=1200');
+}
