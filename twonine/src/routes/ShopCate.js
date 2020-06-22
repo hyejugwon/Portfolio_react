@@ -10,6 +10,7 @@ import WrapWeekly from '../component/Shop/mainWrap/WrapWeekly';
 import WrapPick from '../component/Shop/mainWrap/WrapPick';
 import LEFTBOX from '../component/Shop/jsons/leftBox.json';
 import RIGHTBOX from '../component/Shop/jsons/rightBox.json';
+import TransCategory from '../customs/big';
 
 const ShopCate = ({ history, match : { params: { category, midCategory }} }) => {
     const [ view1, setView1 ] = useState([]); 
@@ -32,22 +33,24 @@ const ShopCate = ({ history, match : { params: { category, midCategory }} }) => 
         setView3(FEED);
         setView6(LEFTBOX);
         setView7(RIGHTBOX);
+        // const bigCate = TransCategory(category);
+
     }, []);
 
-    const transCategory = _cate => {
-        switch(_cate) {
-            case 'women': return 1;
-            case 'acc': return 2;
-            case 'men': return 3;
-            case 'home': return 4;
-            case 'beauty': return 5;
-            case 'tech': return 6;
-            case 'culture': return 7;
-        }
-    }
+    // const transCategory = _cate => {
+    //     switch(_cate) {
+    //         case 'women': return 1;
+    //         case 'acc': return 2;
+    //         case 'men': return 3;
+    //         case 'home': return 4;
+    //         case 'beauty': return 5;
+    //         case 'tech': return 6;
+    //         case 'culture': return 7;
+    //     }
+    // };
 
     useEffect(() => {
-        const value = transCategory(category);
+        const value = TransCategory(category);
         const data1 = MAIN.filter(item => item.type === value);
         setView1(data1);
         const data3 = FEED.filter(item => item.type === value);

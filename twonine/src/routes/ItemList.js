@@ -10,11 +10,16 @@ const ItemList = ({ history, category, midCategory }) => {
 
     useEffect(() => {
         setView(SAMPLE);
+        console.log(category, midCategory); // women, outer
     }, []);
 
     const goDetail = id => {
         history.push(`/detail/${id}`);
     };
+
+    // const getItems = () => {
+    //     Axios.post(`${API}/`)
+    // };
 
    
 
